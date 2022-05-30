@@ -1,4 +1,4 @@
 extends Node
 
 
-var gravity_constant = 9.81
+var gravity_constant = 1000000
