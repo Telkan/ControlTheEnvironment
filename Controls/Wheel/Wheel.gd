@@ -6,7 +6,7 @@ extends Button
 # var b = "text"
 
 export var slowDown = 40
-export var vertical = false
+export var vertical = true
 export var coeffPower = 50
 
 var value = 0
@@ -35,7 +35,6 @@ func _process(delta):
 			if value <0 :
 				value = 0
 	previousPosition = get_viewport().get_mouse_position()
-	print(value)
 
 
 func _on_Wheel_button_down():

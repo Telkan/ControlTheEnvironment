@@ -15,7 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	velocity = Vector2(get_parent().find_node("Wheel").value,get_parent().find_node("Wheel2").value)
+	velocity = Vector2(get_parent().find_node("Horizontal").value,get_parent().find_node("Vertical").value)
 	position+=velocity
 	if Input.is_action_pressed("ui_select"):
 		zoom+= Vector2(zoomSpeed*delta,zoomSpeed*delta)

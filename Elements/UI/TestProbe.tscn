@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Elements/UI/Prediction.gd" type="Script" id=1]
+[ext_resource path="res://Elements/UI/Trail.gd" type="Script" id=2]
+[ext_resource path="res://Elements/UI/TestProbe.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[node name="VisionProbe" type="RigidBody2D" groups=[
+"Probe",
+]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Trail" type="Line2D" parent="."]
+width_curve = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Prediction" type="Line2D" parent="."]
+width = 2.0
+default_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 1 )

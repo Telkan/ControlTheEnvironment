@@ -8,6 +8,9 @@ anchor_bottom = 1.0
 margin_right = -1678.0
 margin_bottom = -944.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="button_down" from="." to="." method="_on_Wheel_button_down"]
 [connection signal="button_up" from="." to="." method="_on_Wheel_button_up"]
