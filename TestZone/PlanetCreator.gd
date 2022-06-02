@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-const TestProbe = preload("res://Elements/UI/TestProbe.tscn")
+const TestProbe = preload("res://Elements/UI/TestProbe/TestProbe.tscn")
 const Planet = preload("res://Elements/Planet/Planet.tscn")
 
 # Called when the node enters the scene tree for the first time.

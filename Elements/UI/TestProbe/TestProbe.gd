@@ -5,16 +5,18 @@ extends RigidBody2D
 # var a = 2
 # var b = "text"
 
-
-
 var gravCenter
-var velocity : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	linear_velocity = Vector2(100,0)
 	pass # Replace with function body.
 
+func setPredLength(newLength):
+	$Prediction.predLength = newLength
+
+#func _process(delta):
+#	pass
 
 func _physics_process(delta):
-	velocity = linear_velocity
 	applied_force = SpacePhysics.calculate_gravity_from_position(get_global_position(), gravCenter)
