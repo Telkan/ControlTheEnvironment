@@ -40,9 +40,9 @@ __meta__ = {
 
 [node name="Launch" type="Button" parent="."]
 margin_left = 719.294
-margin_top = 884.593
+margin_top = 820.593
 margin_right = 830.294
-margin_bottom = 972.593
+margin_bottom = 908.593
 rect_pivot_offset = Vector2( 0, 88 )
 text = "Launch Planet"
 __meta__ = {
@@ -51,9 +51,9 @@ __meta__ = {
 
 [node name="PreviewSteps" type="HSlider" parent="."]
 margin_left = 719.294
-margin_top = 779.471
+margin_top = 766.471
 margin_right = 830.294
-margin_bottom = 795.471
+margin_bottom = 782.471
 min_value = 10.0
 max_value = 200.0
 value = 10.0
@@ -61,5 +61,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PreviousWell" type="Button" parent="."]
+margin_left = 719.294
+margin_top = 928.405
+margin_right = 759.294
+margin_bottom = 968.405
+text = "P"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextWell" type="Button" parent="."]
+anchor_left = -0.00030969
+anchor_right = -0.00030969
+margin_left = 789.457
+margin_top = 929.0
+margin_right = 829.457
+margin_bottom = 969.0
+text = "N"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
 [connection signal="pressed" from="Launch" to="." method="_on_Launch_pressed"]
+[connection signal="pressed" from="PreviousWell" to="." method="_on_PreviousWell_pressed"]
+[connection signal="pressed" from="NextWell" to="." method="_on_NextWell_pressed"]

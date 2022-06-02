@@ -2,6 +2,8 @@ extends CanvasLayer
 
 signal launchProbe(mass, distance, speed)
 signal createPlanet(mass, distance, speed)
+signal nextWell()
+signal previousWell()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -32,3 +34,12 @@ func _on_Test_pressed():
 
 func _on_Launch_pressed():
 	emit_signal("createPlanet",mass,distance,speed)
+
+
+func _on_PreviousWell_pressed():
+	emit_signal("previousWell")
+
+
+
+func _on_NextWell_pressed():
+	emit_signal("nextWell")

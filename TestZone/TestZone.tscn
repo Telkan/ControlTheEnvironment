@@ -31,3 +31,5 @@ position = Vector2( 960, 544 )
 
 [connection signal="createPlanet" from="CreationBoard" to="." method="_on_CreationBoard_createPlanet"]
 [connection signal="launchProbe" from="CreationBoard" to="." method="_on_CreationBoard_launchProbe"]
+[connection signal="nextWell" from="CreationBoard" to="." method="_on_CreationBoard_nextWell"]
+[connection signal="previousWell" from="CreationBoard" to="." method="_on_CreationBoard_previousWell"]
