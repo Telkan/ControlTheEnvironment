@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Elements/UI/SelectedWell/SelectedGravWell.gd" type="Script" id=1]
+
+[node name="SelectedGravWell" type="Polygon2D"]
+polygon = PoolVector2Array( -24, -24, 24, -24, 24, 24, -24, 24, -24, -16, -16, -8, -16, 16, 16, 16, 16, -16, -16, -16 )
+script = ExtResource( 1 )

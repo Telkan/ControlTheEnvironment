@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Elements/UI/DisplayShot/DisplayShot.gd" type="Script" id=1]
+
+[node name="DisplayShot" type="Polygon2D"]
+polygon = PoolVector2Array( -2.76554, -7.35612, 3.03184, -7.57909, 2.88319, -2.00468, 12.0252, -1.93036, 11.8022, 3.64405, 2.58589, 2.67782, 0.950731, 9.81306, -2.31959, 9.36711, -1.79931, 3.7927, -7.37372, 3.56972, -6.63046, -1.85603, -3.06284, -2.00468 )
+script = ExtResource( 1 )
+
+[node name="ShotPreview" type="Line2D" parent="."]

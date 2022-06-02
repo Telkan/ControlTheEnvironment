@@ -18,4 +18,6 @@ func setPredLength(newLength):
 #	pass
 
 func _physics_process(delta):
+	if gravCenter == null:
+		gravCenter = get_tree().get_nodes_in_group("DefaultWell")[0]
 	applied_force = SpacePhysics.calculate_gravity_from_position(get_global_position(), gravCenter)

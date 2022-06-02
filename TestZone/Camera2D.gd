@@ -17,8 +17,8 @@ func _ready():
 func _process(delta):
 	velocity = Vector2(get_parent().find_node("Horizontal").value,get_parent().find_node("Vertical").value)
 	position+=velocity
-	if Input.is_action_pressed("ui_select"):
+	if Input.is_action_pressed("ui_select") and zoom <= Vector2(5,5):
 		zoom+= Vector2(zoomSpeed*delta,zoomSpeed*delta)
-	if Input.is_action_pressed("ui_cancel"):
+	if Input.is_action_pressed("ui_cancel")and zoom >= Vector2(0.1,0.1):
 		zoom+= Vector2(-zoomSpeed*delta,-zoomSpeed*delta)
 	pass

@@ -16,8 +16,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$DisplayShot.position = $Sun.position + Vector2($CreationBoard.distance, 0)
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
+	$DisplayShot.distance = $CreationBoard.distance
 	pass
 
 
@@ -29,6 +29,7 @@ func _on_CreationBoard_launchProbe(mass, distance, speed):
 	newProbe.position = chosenWell.position + Vector2(distance,0)
 	newProbe.gravCenter = chosenWell
 	newProbe.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
+
 	add_child(newProbe)
 
 
