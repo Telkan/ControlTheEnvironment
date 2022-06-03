@@ -36,3 +36,12 @@ value = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Follow" type="CheckButton" parent="."]
+margin_left = 1636.09
+margin_top = 396.433
+margin_right = 1712.09
+margin_bottom = 436.433
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -12,5 +12,5 @@ script = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Bedrock" type="Polygon2D" parent="."]
+[node name="Bedrock" type="Polygon2D" parent="CollisionShape2D"]
 polygon = PoolVector2Array( -8.5988, -5.53467, -6.07611, -8.26758, -3.13297, -9.84426, -0.294945, -10.6852, 1.17662, -10.8954, 3.27887, -10.4749, 5.06577, -9.63404, 7.0629, -7.00624, 8.95492, -3.01198, 10.5316, 0.561829, 10.5316, 2.87429, 9.27025, 5.08165, 8.00891, 7.07878, 4.4351, 9.81169, 1.70219, 10.5475, -2.5023, 11.073, -6.49656, 10.0219, -8.91413, 7.289, -9.43969, 1.29761, -8.49368, -4.37844 )

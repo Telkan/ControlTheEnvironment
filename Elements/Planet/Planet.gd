@@ -15,7 +15,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	scale = planetMass * Vector2.ONE
+	$CollisionShape2D.set_scale(Vector2.ONE *planetMass)
 
 func _physics_process(delta):
 	if gravCenter == null:

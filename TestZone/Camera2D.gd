@@ -15,7 +15,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	velocity = Vector2(get_parent().find_node("Horizontal").value,get_parent().find_node("Vertical").value)
-	position+=velocity
+	if get_parent().find_node("Follow").pressed:
+		position = get_parent().chosenWell.get_global_position()
+	else:
+		velocity = Vector2(get_parent().find_node("Horizontal").value,get_parent().find_node("Vertical").value)
+		position+=velocity
+	
+	
 	zoom = get_parent().find_node("Zoom").value * Vector2(1,1)
 	pass

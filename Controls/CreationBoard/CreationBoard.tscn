@@ -96,6 +96,7 @@ __meta__ = {
 }
 
 [node name="Mass" parent="." instance=ExtResource( 3 )]
+value = 1.0
 
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
 [connection signal="pressed" from="Launch" to="." method="_on_Launch_pressed"]

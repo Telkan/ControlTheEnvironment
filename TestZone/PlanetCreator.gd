@@ -39,6 +39,7 @@ func _on_CreationBoard_createPlanet(mass, distance, speed):
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
+	newPlanet.planetMass = $CreationBoard.mass
 	add_child(newPlanet)
 
 

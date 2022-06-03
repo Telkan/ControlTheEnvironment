@@ -20,7 +20,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	mass += $Mass.value
+	mass = $Mass.value
 	distance += $Distance.value
 	speed += $Speed.value
 	previewSteps = $PreviewSteps.value
