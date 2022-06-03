@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Controls/Wheel/Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controls/CreationBoard/CreationBoard.gd" type="Script" id=2]
-[ext_resource path="res://Elements/UI/Slider/Mass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Controls/Slider/Mass.tscn" type="PackedScene" id=3]
 
 [node name="CreationBoard" type="CanvasLayer"]
 script = ExtResource( 2 )

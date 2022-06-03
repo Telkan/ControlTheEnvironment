@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Elements/UI/Slider/MassDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Controls/Slider/MassDisplay.gd" type="Script" id=1]
 
 [node name="Mass" type="ProgressBar"]
 margin_left = 114.0
