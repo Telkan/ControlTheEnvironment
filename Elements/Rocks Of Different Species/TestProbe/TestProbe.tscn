@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Elements/UI/TestProbe/TestProbe.gd" type="Script" id=1]
+[ext_resource path="res://Elements/Rocks Of Different Species/TestProbe/TestProbe.gd" type="Script" id=1]
 [ext_resource path="res://Elements/UI/Prediction/Prediction.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/UI/Trail/Trail.tscn" type="PackedScene" id=3]
 

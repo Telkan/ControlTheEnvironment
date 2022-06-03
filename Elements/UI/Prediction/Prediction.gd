@@ -5,7 +5,7 @@ extends Line2D
 # var a = 2
 # var b = "text"
 
-var predLength = 100
+var predLength = 10
 var step = .1
 # Called when the node enters the scene tree for the first time.
 func _ready():

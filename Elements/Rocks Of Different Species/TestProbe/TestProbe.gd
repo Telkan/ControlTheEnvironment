@@ -10,5 +10,5 @@ extends GravityElement
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
-	$CollisionShape2D.set_scale(Vector2.ONE *planetMass)
+func setPredLength(newLength):
+	$Prediction.predLength = newLength

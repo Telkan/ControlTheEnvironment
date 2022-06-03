@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-const TestProbe = preload("res://Elements/UI/TestProbe/TestProbe.tscn")
+const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/TestProbe.tscn")
 const Planet = preload("res://Elements/Planet/Planet.tscn")
 
 onready var chosenWell := $Sun
