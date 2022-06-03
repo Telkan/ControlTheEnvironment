@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/TestProbe.tscn")
-const Planet = preload("res://Elements/Planet/Planet.tscn")
+const Planet = preload("res://Elements/Rocks Of Different Species/Planet/Planet.tscn")
 
 onready var chosenWell := $Sun
 
@@ -15,13 +15,13 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
 	$DisplayShot.distance = $CreationBoard.distance
 	pass
 
 
-func _on_CreationBoard_launchProbe(mass, distance, speed):
+func _on_CreationBoard_launchProbe(distance, speed):
 	#Create probe
 	get_tree().call_group("Probe","queue_free")
 	var newProbe = TestProbe.instance()
@@ -29,7 +29,6 @@ func _on_CreationBoard_launchProbe(mass, distance, speed):
 	newProbe.position = chosenWell.position + Vector2(distance,0)
 	newProbe.gravCenter = chosenWell
 	newProbe.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
-
 	add_child(newProbe)
 
 
@@ -39,7 +38,7 @@ func _on_CreationBoard_createPlanet(mass, distance, speed):
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
-	newPlanet.planetMass = $CreationBoard.mass
+	newPlanet.planetMass = mass
 	add_child(newPlanet)
 
 

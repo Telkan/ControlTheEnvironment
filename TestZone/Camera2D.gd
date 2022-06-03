@@ -14,7 +14,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if get_parent().find_node("Follow").pressed:
 		position = get_parent().chosenWell.get_global_position()
 	else:

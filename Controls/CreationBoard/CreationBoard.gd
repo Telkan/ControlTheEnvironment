@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-signal launchProbe(mass, distance, speed)
+signal launchProbe(distance, speed)
 signal createPlanet(mass, distance, speed)
 signal nextWell()
 signal previousWell()
@@ -20,7 +20,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	mass = $Mass.value
 	distance += $Distance.value
 	speed += $Speed.value
@@ -29,7 +29,7 @@ func _process(delta):
 
 
 func _on_Test_pressed():
-	emit_signal("launchProbe",mass,distance,speed)
+	emit_signal("launchProbe",distance,speed)
 	
 
 

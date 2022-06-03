@@ -17,12 +17,12 @@ func generatePath():
 	var currentPosition = get_parent().get_global_position()
 	var currentVelocity = get_parent().linear_velocity
 	
-	for i in range(predLength):
+	for _i in range(predLength):
 		add_point(currentPosition)
 		currentVelocity += SpacePhysics.calculate_gravity_from_position(currentPosition, get_parent().gravCenter) * step
 		currentPosition += currentVelocity * step
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if is_instance_valid(get_parent().gravCenter):
 		generatePath()

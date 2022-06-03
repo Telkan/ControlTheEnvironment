@@ -14,7 +14,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	add_point(get_parent().get_global_position())
 
 	if get_point_count()>= lenght:

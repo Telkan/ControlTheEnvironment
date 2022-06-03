@@ -11,7 +11,7 @@ var velocity : Vector2
 func _ready():
 	pass # Replace with function body.
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not is_instance_valid(gravCenter):
 		gravCenter = get_tree().get_nodes_in_group("DefaultWell")[0]
 	velocity = linear_velocity

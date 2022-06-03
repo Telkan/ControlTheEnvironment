@@ -13,5 +13,5 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	position = get_parent().chosenWell.position + Vector2(distance, 0)

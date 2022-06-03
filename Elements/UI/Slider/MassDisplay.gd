@@ -13,7 +13,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if controled and Input.is_action_pressed("mouseClick"):
 		var mousePosY = get_viewport().get_mouse_position()[1]
 		mousePosY = -(mousePosY - rect_position[1])

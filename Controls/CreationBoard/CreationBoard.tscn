@@ -14,7 +14,6 @@ margin_right = -1484.33
 margin_bottom = -112.673
 focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "S"
 
 [node name="Distance" parent="." instance=ExtResource( 1 )]
@@ -24,7 +23,6 @@ margin_right = -1271.33
 margin_bottom = -110.729
 focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "D"
 
 [node name="Test" type="Button" parent="."]
@@ -35,7 +33,6 @@ margin_bottom = 753.679
 rect_pivot_offset = Vector2( 0, 0.592773 )
 focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "Test Probe"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,7 +46,6 @@ margin_bottom = 883.254
 rect_pivot_offset = Vector2( 0, 0.592773 )
 focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "Boom"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,9 +57,7 @@ margin_top = 820.593
 margin_right = 830.294
 margin_bottom = 908.593
 rect_pivot_offset = Vector2( 0, 88 )
-focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "Launch Planet"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -74,6 +68,7 @@ margin_left = 719.294
 margin_top = 766.471
 margin_right = 830.294
 margin_bottom = 782.471
+focus_mode = 0
 min_value = 10.0
 max_value = 1000.0
 value = 10.0
@@ -86,9 +81,7 @@ margin_left = 719.294
 margin_top = 928.405
 margin_right = 759.294
 margin_bottom = 968.405
-focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "P"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,9 +94,7 @@ margin_left = 789.457
 margin_top = 929.0
 margin_right = 829.457
 margin_bottom = 969.0
-focus_mode = 0
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "N"
 __meta__ = {
 "_edit_use_anchors_": false

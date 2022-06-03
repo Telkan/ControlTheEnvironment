@@ -5,32 +5,28 @@
 [node name="MovementBoard" type="CanvasLayer"]
 
 [node name="Horizontal" parent="." instance=ExtResource( 1 )]
-margin_left = 1509.68
-margin_top = 458.317
-margin_right = -266.318
-margin_bottom = -316.683
-focus_mode = 0
+margin_left = 1513.95
+margin_top = 667.953
+margin_right = -262.049
+margin_bottom = -107.047
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "H"
 
 [node name="Vertical" parent="." instance=ExtResource( 1 )]
-margin_left = 1693.68
-margin_top = 458.317
-margin_right = -82.3184
-margin_bottom = -316.683
-focus_mode = 0
+margin_left = 1697.95
+margin_top = 667.953
+margin_right = -78.0492
+margin_bottom = -107.047
 shortcut_in_tooltip = false
-enabled_focus_mode = 0
 text = "Z"
 
 [node name="Zoom" type="HSlider" parent="."]
-margin_left = 1837.68
-margin_top = 800.881
-margin_right = 2165.68
-margin_bottom = 816.881
+margin_left = 1841.95
+margin_top = 1010.52
+margin_right = 2169.95
+margin_bottom = 1026.52
 rect_rotation = -180.0
-min_value = 0.1
+min_value = 0.05
 max_value = 3.0
 step = 0.05
 value = 1.0
@@ -39,10 +35,11 @@ __meta__ = {
 }
 
 [node name="Follow" type="CheckButton" parent="."]
-margin_left = 1636.09
-margin_top = 396.433
-margin_right = 1712.09
-margin_bottom = 436.433
+margin_left = 1640.36
+margin_top = 606.069
+margin_right = 1716.36
+margin_bottom = 646.069
+shortcut_in_tooltip = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
