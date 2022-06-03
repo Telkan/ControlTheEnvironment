@@ -4,6 +4,7 @@ signal launchProbe(mass, distance, speed)
 signal createPlanet(mass, distance, speed)
 signal nextWell()
 signal previousWell()
+signal destroy()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -43,3 +44,7 @@ func _on_PreviousWell_pressed():
 
 func _on_NextWell_pressed():
 	emit_signal("nextWell")
+
+
+func _on_Boom_pressed():
+	emit_signal("destroy")

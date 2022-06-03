@@ -41,6 +41,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Boom" type="Button" parent="."]
+margin_left = 903.181
+margin_top = 728.254
+margin_right = 1081.18
+margin_bottom = 883.254
+rect_pivot_offset = Vector2( 0, 0.592773 )
+focus_mode = 0
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Boom"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Launch" type="Button" parent="."]
 margin_left = 719.294
 margin_top = 820.593
@@ -61,7 +75,7 @@ margin_top = 766.471
 margin_right = 830.294
 margin_bottom = 782.471
 min_value = 10.0
-max_value = 200.0
+max_value = 1000.0
 value = 10.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -96,9 +110,11 @@ __meta__ = {
 }
 
 [node name="Mass" parent="." instance=ExtResource( 3 )]
+max_value = 4.0
 value = 1.0
 
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
+[connection signal="pressed" from="Boom" to="." method="_on_Boom_pressed"]
 [connection signal="pressed" from="Launch" to="." method="_on_Launch_pressed"]
 [connection signal="pressed" from="PreviousWell" to="." method="_on_PreviousWell_pressed"]
 [connection signal="pressed" from="NextWell" to="." method="_on_NextWell_pressed"]

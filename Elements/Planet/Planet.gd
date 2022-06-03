@@ -18,7 +18,7 @@ func _process(delta):
 	$CollisionShape2D.set_scale(Vector2.ONE *planetMass)
 
 func _physics_process(delta):
-	if gravCenter == null:
+	if not is_instance_valid(gravCenter):
 		gravCenter = get_tree().get_nodes_in_group("DefaultWell")[0]
 	velocity = linear_velocity
 	applied_force = SpacePhysics.calculate_gravity_from_position(get_global_position(), gravCenter)

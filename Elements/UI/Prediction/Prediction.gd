@@ -24,4 +24,5 @@ func generatePath():
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	generatePath()
+	if is_instance_valid(get_parent().gravCenter):
+		generatePath()

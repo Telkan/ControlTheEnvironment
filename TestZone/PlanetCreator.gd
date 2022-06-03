@@ -65,3 +65,10 @@ func _on_CreationBoard_previousWell():
 		chosenWell = listOfWells[-1]
 		return
 	chosenWell = listOfWells[currentWellPos-1]
+
+
+func _on_CreationBoard_destroy():
+	if chosenWell.name != "Sun":
+		chosenWell.queue_free()
+		chosenWell = get_tree().get_nodes_in_group("DefaultWell")[0]
+
