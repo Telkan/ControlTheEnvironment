@@ -5,9 +5,9 @@ extends Button
 # var a = 2
 # var b = "text"
 
-export var slowDown = 40
+export var slowDown = 40.0
 export var vertical = true
-export var coeffPower = 50
+export var coeffPower = 50.0
 
 var value = 0
 var active = false

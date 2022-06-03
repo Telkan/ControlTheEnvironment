@@ -34,6 +34,7 @@ func _on_CreationBoard_launchProbe(mass, distance, speed):
 
 
 func _on_CreationBoard_createPlanet(mass, distance, speed):
+	get_tree().call_group("Probe","queue_free")
 	var newPlanet = Planet.instance()
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
