@@ -6,7 +6,7 @@ extends RigidBody2D
 # var b = "text"
 
 
-
+var planetMass 
 var gravCenter
 var velocity : Vector2
 
@@ -14,6 +14,8 @@ var velocity : Vector2
 func _ready():
 	pass # Replace with function body.
 
+func _process(delta):
+	scale = planetMass * Vector2.ONE
 
 func _physics_process(delta):
 	if gravCenter == null:

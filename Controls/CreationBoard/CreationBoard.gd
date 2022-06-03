@@ -8,7 +8,7 @@ signal previousWell()
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var mass = 50
+var mass = 1
 var distance = 100
 var speed = 100
 var previewSteps = 10

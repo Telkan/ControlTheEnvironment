@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Elements/UI/Slider/MassDisplay.gd" type="Script" id=1]
+
+[node name="Mass" type="ProgressBar"]
+margin_left = 114.0
+margin_top = 967.0
+margin_right = 416.0
+margin_bottom = 1101.01
+rect_rotation = -90.0
+min_value = 0.01
+max_value = 10.0
+value = 0.01
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_MassDisplay_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_MassDisplay_mouse_exited"]
