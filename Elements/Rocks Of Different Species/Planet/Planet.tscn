@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Ice.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -71,6 +72,7 @@ polygon = PoolVector2Array( -8.54171, 2.95151, -11.1403, 3.34524, -13.1089, 4.52
 
 [node name="Ice" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 3 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Ice"]
 color = Color( 0.403922, 0.917647, 1, 1 )

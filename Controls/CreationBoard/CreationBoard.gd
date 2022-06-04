@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal launchProbe(distance, speed)
-signal createPlanet(mass, distance, speed)
+signal createPlanet(mass, distance, speed, planetType)
 signal nextWell()
 signal previousWell()
 signal destroy()
@@ -34,7 +34,7 @@ func _on_Test_pressed():
 
 
 func _on_Launch_pressed():
-	emit_signal("createPlanet",mass,distance,speed)
+	emit_signal("createPlanet",mass,distance,speed,$ChooseType.planetType)
 
 
 func _on_PreviousWell_pressed():
@@ -48,3 +48,5 @@ func _on_NextWell_pressed():
 
 func _on_Boom_pressed():
 	emit_signal("destroy")
+
+

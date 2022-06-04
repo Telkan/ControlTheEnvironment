@@ -50,5 +50,5 @@ func absorbRessources(incomingRessources:RessourceTransfer):
 
 func getRessourceTransfer():
 	var ressource = RessourceTransfer.new()
-	ressource.fillRessourceTransfer(water,bio,metal,technology,food,people,planetMass)
+	ressource.fillRessourceTransfer(water,bio,metal,technology,food,people,planetMass/10)
 	return ressource

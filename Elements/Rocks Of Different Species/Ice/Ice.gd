@@ -12,7 +12,7 @@ export var massToIceCoefficient = 1000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	water = 10*planetMass
 	pass # Replace with function body.
 
 

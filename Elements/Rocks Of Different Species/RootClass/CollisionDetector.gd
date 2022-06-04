@@ -33,5 +33,7 @@ func _on_CollisionDetector_area_entered(area):
 			var ressources = planet.getRessourceTransfer()
 			otherPlanet.absorbRessources(ressources)
 			planet.queue_free()
-		pass
+	
+	if otherPlanet.name == "Sun":
+		planet.queue_free()
 	pass # Replace with function body.

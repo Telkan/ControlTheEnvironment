@@ -5,7 +5,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/TestProbe.tscn")
-const Planet = preload("res://Elements/Rocks Of Different Species/Ice/Ice.tscn")
+const Planet = preload("res://Elements/Rocks Of Different Species/Planet/Planet.tscn")
+const Ice = preload("res://Elements/Rocks Of Different Species/Ice/Ice.tscn")
 
 onready var chosenWell := $Sun
 
@@ -35,9 +36,14 @@ func _on_CreationBoard_launchProbe(distance, speed):
 	add_child(newProbe)
 
 
-func _on_CreationBoard_createPlanet(mass, distance, speed):
+func _on_CreationBoard_createPlanet(mass, distance, speed, planetType):
 	get_tree().call_group("Probe","queue_free")
-	var newPlanet = Planet.instance()
+	var newPlanet
+	match planetType:
+		SpacePhysics.PLANET_TYPE.PLANET:
+			newPlanet = Planet.instance()
+		SpacePhysics.PLANET_TYPE.ICE:
+			newPlanet = Ice.instance()
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
