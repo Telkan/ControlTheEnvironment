@@ -8,6 +8,8 @@ const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/T
 const Planet = preload("res://Elements/Rocks Of Different Species/Planet/Planet.tscn")
 const Ice = preload("res://Elements/Rocks Of Different Species/Ice/Ice.tscn")
 const Metal = preload("res://Elements/Rocks Of Different Species/Metal/Metal.tscn")
+const Technology = preload("res://Elements/Rocks Of Different Species/Technology/Technology.tscn")
+const Bio = preload("res://Elements/Rocks Of Different Species/Bio/Bio.tscn")
 
 onready var chosenWell := $Sun
 
@@ -47,6 +49,10 @@ func _on_CreationBoard_createPlanet(mass, distance, speed, planetType):
 			newPlanet = Ice.instance()
 		SpacePhysics.PLANET_TYPE.METAL:
 			newPlanet = Metal.instance()
+		SpacePhysics.PLANET_TYPE.TECHNOLOGY:
+			newPlanet = Technology.instance()
+		SpacePhysics.PLANET_TYPE.BIO:
+			newPlanet = Bio.instance()
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)

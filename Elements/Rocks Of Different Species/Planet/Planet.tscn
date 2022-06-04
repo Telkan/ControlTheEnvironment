@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Ice.gd" type="Script" id=3]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Metals.gd" type="Script" id=4]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Houses.gd" type="Script" id=5]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Animals.gd" type="Script" id=6]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Trees.gd" type="Script" id=7]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Technology.gd" type="Script" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -23,6 +27,7 @@ polygon = PoolVector2Array( -8.5988, -5.53467, -6.07611, -8.26758, -3.13297, -9.
 
 [node name="Houses" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 5 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Houses"]
 color = Color( 0.494118, 0.231373, 0, 1 )
@@ -30,6 +35,7 @@ polygon = PoolVector2Array( 5.15806, -5.97478, 11.4985, -8.89475, 18.1727, -8.14
 
 [node name="Animals" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 6 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Animals"]
 color = Color( 0.305882, 0.305882, 0.305882, 1 )
@@ -52,6 +58,7 @@ polygon = PoolVector2Array( 10.5903, 1.70093, 10.7203, 1.45938, 10.9433, 1.49654
 
 [node name="Trees" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 7 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Trees"]
 color = Color( 0.0431373, 0.517647, 0.14902, 1 )
@@ -67,6 +74,7 @@ polygon = PoolVector2Array( -7.7766, -4.63768, -14.6176, -6.30623, -12.1148, -3.
 
 [node name="Technology" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 8 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Technology"]
 color = Color( 0, 0.298039, 1, 1 )
