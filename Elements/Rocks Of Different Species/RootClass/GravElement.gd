@@ -7,18 +7,21 @@ var gravCenter
 var velocity : Vector2
 
 
-var people = 1
-var water = 2
-var food = 3
-var bio = 4
-var metal = 5
-var technology = 6
+var people = 0
+var water = 0
+var food = 0
+var bio = 0
+var metal = 0
+var technology = 0
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+
+func _process(delta):
+	$CollisionShape2D.set_scale(Vector2.ONE *planetMass)
 
 func _physics_process(_delta):
 	if not is_instance_valid(gravCenter):

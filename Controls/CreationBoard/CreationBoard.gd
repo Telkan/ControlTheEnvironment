@@ -10,8 +10,8 @@ signal destroy()
 # var a = 2
 # var b = "text"
 var mass = 1
-var distance = 100
-var speed = 100
+var distance = 400
+var speed = 200
 var previewSteps = 10
 
 # Called when the node enters the scene tree for the first time.

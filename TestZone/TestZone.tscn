@@ -11,8 +11,8 @@
 [node name="Universe" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 544.0 ],
-"_edit_vertical_guides_": [ 960.0, 704.0, 1216.0, 448.0, 1472.0 ]
+"_edit_horizontal_guides_": [ 544.0, 544.0 ],
+"_edit_vertical_guides_": [ 960.0, 1856.0, 1344.0 ]
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]

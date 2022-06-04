@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/TestProbe.tscn")
-const Planet = preload("res://Elements/Rocks Of Different Species/Planet/Planet.tscn")
+const Planet = preload("res://Elements/Rocks Of Different Species/Ice/Ice.tscn")
 
 onready var chosenWell := $Sun
 

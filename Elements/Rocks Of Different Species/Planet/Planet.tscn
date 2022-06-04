@@ -1,12 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
-[ext_resource path="res://Elements/Rocks Of Different Species/Planet/CollisionDetector.gd" type="Script" id=2]
+[ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 10.5
 
 [node name="Planet" type="RigidBody2D" groups=[
 "GravityWell",
@@ -85,11 +82,4 @@ rotation = 3.14159
 color = Color( 0.403922, 0.917647, 1, 1 )
 polygon = PoolVector2Array( 3.31553, 9.43556, 3.17522, 10.3476, -0.122013, 11.0491, -1.6654, 11.4349, -2.78786, 11.3648, -4.47155, 11.0491, -5.45371, 10.7334, -6.01494, 10.2073, -5.59402, 9.50571 )
 
-[node name="CollisionDetector" type="Area2D" parent="CollisionShape2D"]
-script = ExtResource( 2 )
-planetPath = NodePath("../..")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/CollisionDetector"]
-shape = SubResource( 2 )
-
-[connection signal="area_entered" from="CollisionShape2D/CollisionDetector" to="CollisionShape2D/CollisionDetector" method="_on_CollisionDetector_area_entered"]
+[node name="CollisionDetector" parent="CollisionShape2D" instance=ExtResource( 2 )]
