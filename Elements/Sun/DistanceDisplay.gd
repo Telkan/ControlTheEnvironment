@@ -12,7 +12,7 @@ func _ready():
 
 func _draw():
 	draw_circle_arc(get_position(),900,0,360,Color.aqua)
-	draw_circle_arc(get_position(),400,0,360,Color.webmaroon)
+	draw_circle_arc(get_position(),350,0,360,Color.webmaroon)
 	pass
 
 func draw_circle_arc(center, radius, angle_from, angle_to, color):

@@ -7,6 +7,7 @@ extends Node2D
 const TestProbe = preload("res://Elements/Rocks Of Different Species/TestProbe/TestProbe.tscn")
 const Planet = preload("res://Elements/Rocks Of Different Species/Planet/Planet.tscn")
 const Ice = preload("res://Elements/Rocks Of Different Species/Ice/Ice.tscn")
+const Metal = preload("res://Elements/Rocks Of Different Species/Metal/Metal.tscn")
 
 onready var chosenWell := $Sun
 
@@ -44,6 +45,8 @@ func _on_CreationBoard_createPlanet(mass, distance, speed, planetType):
 			newPlanet = Planet.instance()
 		SpacePhysics.PLANET_TYPE.ICE:
 			newPlanet = Ice.instance()
+		SpacePhysics.PLANET_TYPE.METAL:
+			newPlanet = Metal.instance()
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)
