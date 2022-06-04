@@ -13,7 +13,7 @@ func addRessource(element, value):
 	values.append(value)
 	elements.append(element)
 	
-func fillRessourceTransfer(water,bio,metal,technology,food,people):
+func fillRessourceTransfer(water,bio,metal,technology,food,people, planetmass):
 	resetResources()
 	addRessource(SpacePhysics.RESSOURCE_TYPE.WATER, water)
 	addRessource(SpacePhysics.RESSOURCE_TYPE.BIO, bio)	
@@ -21,3 +21,4 @@ func fillRessourceTransfer(water,bio,metal,technology,food,people):
 	addRessource(SpacePhysics.RESSOURCE_TYPE.TECHNOLOGY, technology)
 	addRessource(SpacePhysics.RESSOURCE_TYPE.FOOD, food)
 	addRessource(SpacePhysics.RESSOURCE_TYPE.PEOPLE, people)
+	addRessource(SpacePhysics.RESSOURCE_TYPE.PLANETMASS, planetmass)

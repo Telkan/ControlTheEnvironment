@@ -6,12 +6,14 @@ var planetMass
 var gravCenter
 var velocity : Vector2
 
-var people = 0
-var water = 0
-var food = 0
-var bio = 0
-var metal = 0
-var technology = 0
+
+var people = 1
+var water = 2
+var food = 3
+var bio = 4
+var metal = 5
+var technology = 6
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,15 +31,21 @@ func absorbRessources(incomingRessources:RessourceTransfer):
 	for i in range(len(incomingRessources.values)):
 		match incomingRessources.elements[i]:
 			SpacePhysics.RESSOURCE_TYPE.BIO:
-				bio+=incomingRessources.value[i]
+				bio+=incomingRessources.values[i]
 			SpacePhysics.RESSOURCE_TYPE.FOOD:
-				food+=incomingRessources.value[i]
+				food+=incomingRessources.values[i]
 			SpacePhysics.RESSOURCE_TYPE.METAL:
-				metal+=incomingRessources.value[i]
+				metal+=incomingRessources.values[i]
 			SpacePhysics.RESSOURCE_TYPE.PEOPLE:
-				people+=incomingRessources.value[i]
+				people+=incomingRessources.values[i]
 			SpacePhysics.RESSOURCE_TYPE.TECHNOLOGY:
-				technology+=incomingRessources.value[i]
+				technology+=incomingRessources.values[i]
 			SpacePhysics.RESSOURCE_TYPE.WATER:
-				water+=incomingRessources.value[i]
-	pass
+				water+=incomingRessources.values[i]
+			SpacePhysics.RESSOURCE_TYPE.PLANETMASS:
+				planetMass+=incomingRessources.values[i]
+
+func getRessourceTransfer():
+	var ressource = RessourceTransfer.new()
+	ressource.fillRessourceTransfer(water,bio,metal,technology,food,people,planetMass)
+	return ressource

@@ -16,9 +16,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	if not is_instance_valid(chosenWell):
+		chosenWell = get_tree().get_nodes_in_group("DefaultWell")[0]
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
 	$DisplayShot.distance = $CreationBoard.distance
 	pass
+
 
 
 func _on_CreationBoard_launchProbe(distance, speed):
