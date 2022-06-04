@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GravityElement",
 "language": "GDScript",
 "path": "res://Elements/Rocks Of Different Species/RootClass/GravElement.gd"
+}, {
+"base": "Node",
+"class": "RessourceTransfer",
+"language": "GDScript",
+"path": "res://GlobalStuff/RessourceTransfer.gd"
 } ]
 _global_script_class_icons={
-"GravityElement": ""
+"GravityElement": "",
+"RessourceTransfer": ""
 }
 
 [application]

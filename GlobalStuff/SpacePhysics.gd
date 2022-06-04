@@ -1,6 +1,6 @@
 extends Node
 
-
+enum RESSOURCE_TYPE {WATER,BIO,METAL,TECHNOLOGY,FOOD,PEOPLE}
 var gravity_constant = 1000000
 
 
