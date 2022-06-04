@@ -20,7 +20,7 @@ var technology = 0
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	$CollisionShape2D.set_scale(Vector2.ONE *planetMass)
 
 func _physics_process(_delta):

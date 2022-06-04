@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Ice.gd" type="Script" id=3]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Metals.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -58,6 +59,7 @@ polygon = PoolVector2Array( -4.14187, -3.75522, -11.9554, -19.912, -8.84324, -20
 
 [node name="Metals" type="Node2D" parent="CollisionShape2D"]
 visible = false
+script = ExtResource( 4 )
 
 [node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Metals"]
 color = Color( 0.235294, 0.235294, 0.235294, 1 )
