@@ -15,3 +15,11 @@ func _ready():
 func _process(_delta):
 	set_global_position(get_parent().chosenWell.get_global_position())
 	scale = get_parent().get_node("Camera2D").zoom
+	
+	var planetToDisplay = get_parent().chosenWell
+	if planetToDisplay.name == "Sun":
+		$displayValues.text = "NAME=SUN\nTEMPERATURE=HOT\nTIME OF DAY=UNKNOWN\nASTROLOGICAL SIGN=LEO"
+	else:
+		var format_string = "WATER=%s\nFOOD=%s\nBIOSPHERE=%s\nMETALS=%s\nPEOPLE=%s\nTECHNOLOGY=%s"
+		var actual_string = format_string % [planetToDisplay.water,planetToDisplay.food,planetToDisplay.bio,planetToDisplay.metal,planetToDisplay.people, planetToDisplay.technology]
+		$displayValues.text = actual_string
