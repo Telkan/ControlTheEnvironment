@@ -26,6 +26,12 @@ func _process(_delta):
 		chosenWell = get_tree().get_nodes_in_group("DefaultWell")[0]
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
 	$DisplayShot.distance = $CreationBoard.distance
+	if $MovementBoard/DispOnOff.pressed == true:
+		$DisplayShot.set_visible(true)
+		$SelectedGravWell.set_visible(true)
+	else:
+		$DisplayShot.set_visible(false)
+		$SelectedGravWell.set_visible(false)
 	pass
 
 

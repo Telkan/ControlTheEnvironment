@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Controls/Wheel/Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controls/CreationBoard/CreationBoard.gd" type="Script" id=2]
 [ext_resource path="res://Controls/Slider/Mass.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Elements/Rocks Of Different Species/Metal/Metal.png" type="Texture" id=4]
 [ext_resource path="res://Controls/CreationBoard/ChooseType.gd" type="Script" id=5]
+[ext_resource path="res://Elements/Rocks Of Different Species/Ice/Ice.png" type="Texture" id=6]
+[ext_resource path="res://Elements/Rocks Of Different Species/Technology/Technology.png" type="Texture" id=7]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets.png" type="Texture" id=8]
+[ext_resource path="res://Elements/Rocks Of Different Species/Bio/Bio.png" type="Texture" id=9]
 
 [node name="CreationBoard" type="CanvasLayer"]
 offset = Vector2( 0, 400 )
@@ -127,31 +131,32 @@ __meta__ = {
 ]]
 visible = false
 position = Vector2( 99.7806, 65.0356 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.19135, 0.19135 )
+texture = ExtResource( 8 )
 
 [node name="Ice" type="Sprite" parent="ChooseType" groups=[
 "Element",
 ]]
 visible = false
-modulate = Color( 0, 0.694118, 1, 1 )
 position = Vector2( 99.7806, 65.0356 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.15899, 0.15899 )
+texture = ExtResource( 6 )
 
 [node name="Metal" type="Sprite" parent="ChooseType" groups=[
 "Element",
 ]]
 visible = false
-modulate = Color( 1, 0.180392, 0.180392, 1 )
 position = Vector2( 99.7806, 65.0356 )
+scale = Vector2( 0.157777, 0.157777 )
 texture = ExtResource( 4 )
 
 [node name="Bio" type="Sprite" parent="ChooseType" groups=[
 "Element",
 ]]
 visible = false
-modulate = Color( 0.180392, 1, 0.290196, 1 )
 position = Vector2( 99.7806, 65.0356 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.264423, 0.264423 )
+texture = ExtResource( 9 )
 
 [node name="Technology" type="Sprite" parent="ChooseType" groups=[
 "Element",
@@ -159,7 +164,8 @@ texture = ExtResource( 4 )
 visible = false
 modulate = Color( 0.87451, 0, 1, 1 )
 position = Vector2( 99.7806, 65.0356 )
-texture = ExtResource( 4 )
+scale = Vector2( 0.188665, 0.188665 )
+texture = ExtResource( 7 )
 
 [node name="OpenClose" type="Button" parent="."]
 margin_left = 15.6615

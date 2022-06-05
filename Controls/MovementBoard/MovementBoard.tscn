@@ -35,11 +35,21 @@ __meta__ = {
 }
 
 [node name="Follow" type="CheckButton" parent="."]
-margin_left = 1640.36
-margin_top = 606.069
-margin_right = 1716.36
-margin_bottom = 646.069
+margin_left = 1544.14
+margin_top = 604.287
+margin_right = 1620.14
+margin_bottom = 644.287
 shortcut_in_tooltip = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DispOnOff" type="CheckButton" parent="."]
+margin_left = 1738.14
+margin_top = 604.287
+margin_right = 1814.14
+margin_bottom = 644.287
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
