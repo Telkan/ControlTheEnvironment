@@ -23,6 +23,8 @@ func _ready():
 func _process(_delta):
 	mass = $Mass.value
 	distance += $Distance.value
+	if distance < get_parent().chosenWell.planetMass * 25:
+		distance = get_parent().chosenWell.planetMass * 25
 	speed += $Speed.value
 	previewSteps = $PreviewSteps.value
 	pass
