@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Elements/Sun/Sun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TestZone/PlanetCreator.gd" type="Script" id=2]
 [ext_resource path="res://Elements/UI/SelectedWell/SelectedWell.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/UI/DisplayShot/DisplayShot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ressources/scanlines2.png" type="Texture" id=5]
 [ext_resource path="res://Controls/CreationBoard/CreationBoard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://TestZone/Camera2D.gd" type="Script" id=7]
 [ext_resource path="res://Controls/MovementBoard/MovementBoard.tscn" type="PackedScene" id=8]
@@ -46,6 +47,14 @@ position = Vector2( 960, 544 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 960, 540 )
+scale = Vector2( 1.2, 0.9 )
+texture = ExtResource( 5 )
 
 [connection signal="createPlanet" from="CreationBoard" to="." method="_on_CreationBoard_createPlanet"]
 [connection signal="destroy" from="CreationBoard" to="." method="_on_CreationBoard_destroy"]
