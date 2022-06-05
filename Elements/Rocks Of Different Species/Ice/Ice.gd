@@ -6,7 +6,7 @@ extends GravityElement
 # var b = "text"
 
 export var growingCoeff = 1.0
-export var minDistanceToGrow = 900
+var minDistanceToGrow = SpacePhysics.minDistanceForIce
 export var massToIceCoefficient = 1000
 
 

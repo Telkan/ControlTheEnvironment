@@ -11,8 +11,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _draw():
-	draw_circle_arc(get_position(),900,0,360,Color.aqua)
-	draw_circle_arc(get_position(),350,0,360,Color.webmaroon)
+	draw_circle_arc(get_position(),SpacePhysics.minDistanceForIce,0,360,Color.aqua)
+	draw_circle_arc(get_position(),SpacePhysics.maxDistanceForMetal,0,360,Color.webmaroon)
 	pass
 
 func draw_circle_arc(center, radius, angle_from, angle_to, color):

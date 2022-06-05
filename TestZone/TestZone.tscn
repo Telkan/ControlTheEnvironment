@@ -30,6 +30,9 @@ __meta__ = {
 position = Vector2( 960.241, 542.408 )
 current = true
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="DisplayShot" parent="." instance=ExtResource( 4 )]
 
@@ -48,13 +51,16 @@ position = Vector2( 960, 544 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ScanLines" type="CanvasLayer" parent="."]
 layer = 0
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+[node name="ScanSprite" type="Sprite" parent="ScanLines"]
 position = Vector2( 960, 540 )
 scale = Vector2( 1.2, 0.9 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="createPlanet" from="CreationBoard" to="." method="_on_CreationBoard_createPlanet"]
 [connection signal="destroy" from="CreationBoard" to="." method="_on_CreationBoard_destroy"]

@@ -21,5 +21,5 @@ func _process(_delta):
 		$displayValues.text = "NAME=SUN\nTEMPERATURE=HOT\nTIME OF DAY=UNKNOWN\nASTROLOGICAL SIGN=LEO"
 	else:
 		var format_string = "WATER=%s\nFOOD=%s\nBIOSPHERE=%s\nMETALS=%s\nPEOPLE=%s\nTECHNOLOGY=%s"
-		var actual_string = format_string % [planetToDisplay.water,planetToDisplay.food,planetToDisplay.bio,planetToDisplay.metal,planetToDisplay.people, planetToDisplay.technology]
+		var actual_string = format_string % [floor(planetToDisplay.water),floor(planetToDisplay.food),floor(planetToDisplay.bio),floor(planetToDisplay.metal),floor(planetToDisplay.people), floor(planetToDisplay.technology)]
 		$displayValues.text = actual_string

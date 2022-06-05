@@ -7,12 +7,12 @@ var gravCenter
 var velocity : Vector2
 
 
-var people = 0
-var water = 0
-var food = 0
-var bio = 0
-var metal = 0
-var technology = 0
+var people = 0.0
+var water = 0.0
+var food = 0.0
+var bio = 0.0
+var metal = 0.0
+var technology = 0.0
 
 
 

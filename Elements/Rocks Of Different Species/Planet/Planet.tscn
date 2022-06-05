@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Animals.gd" type="Script" id=6]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Trees.gd" type="Script" id=7]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Technology.gd" type="Script" id=8]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/RocketFactory.gd" type="Script" id=9]
+[ext_resource path="res://Elements/Rocks Of Different Species/RootClass/RessourcePicker.tscn" type="PackedScene" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -95,3 +97,14 @@ color = Color( 0.403922, 0.917647, 1, 1 )
 polygon = PoolVector2Array( 3.31553, 9.43556, 3.17522, 10.3476, -0.122013, 11.0491, -1.6654, 11.4349, -2.78786, 11.3648, -4.47155, 11.0491, -5.45371, 10.7334, -6.01494, 10.2073, -5.59402, 9.50571 )
 
 [node name="CollisionDetector" parent="CollisionShape2D" instance=ExtResource( 2 )]
+
+[node name="RocketFactory" type="Node2D" parent="CollisionShape2D"]
+script = ExtResource( 9 )
+originPath = NodePath("../..")
+
+[node name="Timer" type="Timer" parent="CollisionShape2D/RocketFactory"]
+wait_time = 5.0
+
+[node name="RessourcePicker" parent="CollisionShape2D" instance=ExtResource( 10 )]
+
+[connection signal="timeout" from="CollisionShape2D/RocketFactory/Timer" to="CollisionShape2D/RocketFactory" method="_on_Timer_timeout"]

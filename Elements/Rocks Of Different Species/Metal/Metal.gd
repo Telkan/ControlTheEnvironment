@@ -6,7 +6,7 @@ extends GravityElement
 # var b = "text"
 
 export var growingCoeff = 1.0
-export var maxDistanceToGrow = 350
+var maxDistanceToGrow = SpacePhysics.maxDistanceForMetal
 export var massToMetalCoefficient = 1000
 
 

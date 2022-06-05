@@ -11,6 +11,8 @@ const Metal = preload("res://Elements/Rocks Of Different Species/Metal/Metal.tsc
 const Technology = preload("res://Elements/Rocks Of Different Species/Technology/Technology.tscn")
 const Bio = preload("res://Elements/Rocks Of Different Species/Bio/Bio.tscn")
 
+
+
 onready var chosenWell := $Sun
 
 # Called when the node enters the scene tree for the first time.

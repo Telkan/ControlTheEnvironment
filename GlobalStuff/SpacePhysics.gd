@@ -4,6 +4,8 @@ enum RESSOURCE_TYPE {WATER,BIO,METAL,TECHNOLOGY,FOOD,PEOPLE,PLANETMASS}
 enum PLANET_TYPE {PLANET,ICE, METAL, BIO, TECHNOLOGY}
 var gravity_constant = 1000000
 
+var minDistanceForIce = 900
+var maxDistanceForMetal = 350
 
 func calculate_gravity_from_position(currentPosition, gravCenter):
 	var gravDir = (gravCenter.get_global_position() - currentPosition).normalized()
