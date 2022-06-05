@@ -13,6 +13,7 @@ var mass = 1
 var distance = 400
 var speed = 200
 var previewSteps = 10
+var hidden = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -52,3 +53,13 @@ func _on_Boom_pressed():
 	emit_signal("destroy")
 
 
+
+
+func _on_OpenClose_pressed():
+	if hidden:
+		set_offset(Vector2(0,0))
+		hidden = false
+	else:
+		set_offset(Vector2(0,400))
+		hidden = true
+	pass # Replace with function body.
