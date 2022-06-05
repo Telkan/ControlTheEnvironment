@@ -15,7 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(_delta):
-	if get_parent().get_parent().food > 10:
+	if get_parent().get_parent().food > 100:
 		set_visible(true)
 	else:
 		set_visible(false)

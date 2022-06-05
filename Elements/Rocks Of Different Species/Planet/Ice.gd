@@ -13,7 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if get_parent().get_parent().water > 10:
+	if get_parent().get_parent().water > 100:
 		set_visible(true)
 	else:
 		set_visible(false)
