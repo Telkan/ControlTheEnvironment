@@ -30,3 +30,7 @@ func _process(delta):
 		if metal > planetMass*massToMetalCoefficient:
 			metal = planetMass*massToMetalCoefficient
 	
+func getRessourceTransfer():
+	var ressource = RessourceTransfer.new()
+	ressource.fillRessourceTransfer(0,0,metal,0,0,-planetMass*100,0)
+	return ressource

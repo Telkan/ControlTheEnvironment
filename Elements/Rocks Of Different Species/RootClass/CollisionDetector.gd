@@ -23,6 +23,7 @@ func get_planet():
 
 func _on_CollisionDetector_area_entered(area):
 	var otherPlanet = area.get_planet()
+	
 	if otherPlanet.planetMass > planet.planetMass:
 		var ressources = planet.getRessourceTransfer()
 		otherPlanet.absorbRessources(ressources)
@@ -33,6 +34,8 @@ func _on_CollisionDetector_area_entered(area):
 			var ressources = planet.getRessourceTransfer()
 			otherPlanet.absorbRessources(ressources)
 			planet.queue_free()
+	
+	
 	
 	if otherPlanet.name == "Sun":
 		planet.queue_free()

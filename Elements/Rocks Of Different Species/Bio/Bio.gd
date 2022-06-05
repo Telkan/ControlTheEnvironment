@@ -5,7 +5,10 @@ extends GravityElement
 # var a = 2
 # var b = "text"
 
-
+func getRessourceTransfer():
+	var ressource = RessourceTransfer.new()
+	ressource.fillRessourceTransfer(0,bio,0,0,0,-planetMass*100,0)
+	return ressource
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

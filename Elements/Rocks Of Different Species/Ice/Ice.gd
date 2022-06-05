@@ -30,3 +30,7 @@ func _process(delta):
 		if water > planetMass*massToIceCoefficient:
 			water = planetMass*massToIceCoefficient
 	
+func getRessourceTransfer():
+	var ressource = RessourceTransfer.new()
+	ressource.fillRessourceTransfer(water,0,0,0,0,-planetMass*100,0)
+	return ressource

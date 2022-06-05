@@ -20,3 +20,8 @@ func _process(_delta):
 	bio = 0
 	metal = 0
 	water = 0
+
+func getRessourceTransfer():
+	var ressource = RessourceTransfer.new()
+	ressource.fillRessourceTransfer(0,0,0,technology,0,-planetMass*100,0)
+	return ressource

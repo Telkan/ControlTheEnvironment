@@ -16,14 +16,17 @@ func increaseTech(delta):
 	technology+= people * technoGrowingCoeff * delta
 	
 func increasePeople(delta):
+	if people<0:
+		people=0
 	if food>1 and people<1:
 		people = 1
-	people += people * peopleGrowingCoeff * delta
+	if people>=1:
+		people += people * peopleGrowingCoeff * delta
 	if people>food:
 		people=food
 		
 func increaseFood(delta):
-	food = (water*bio*delta) / 100
+	food = (water*bio*delta) / 10
 	pass
 	
 func increaseBio(delta):
@@ -33,9 +36,9 @@ func increaseBio(delta):
 	pass
 
 func _process(delta):
-	increaseTech(delta)
 	increasePeople(delta)
-	increaseFood(delta)
 	increaseBio(delta)
+	increaseFood(delta)
+	increaseTech(delta)
 
 	pass

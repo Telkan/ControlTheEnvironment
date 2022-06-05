@@ -35,18 +35,31 @@ func absorbRessources(incomingRessources:RessourceTransfer):
 		match incomingRessources.elements[i]:
 			SpacePhysics.RESSOURCE_TYPE.BIO:
 				bio+=incomingRessources.values[i]
+				if bio<0:
+					bio=0
 			SpacePhysics.RESSOURCE_TYPE.FOOD:
 				food+=incomingRessources.values[i]
+				if food<0:
+					food=0
 			SpacePhysics.RESSOURCE_TYPE.METAL:
 				metal+=incomingRessources.values[i]
+				if metal<0:
+					metal=0
 			SpacePhysics.RESSOURCE_TYPE.PEOPLE:
 				people+=incomingRessources.values[i]
+				if people<0:
+					people=0
 			SpacePhysics.RESSOURCE_TYPE.TECHNOLOGY:
 				technology+=incomingRessources.values[i]
+				if technology<0:
+					technology=0
 			SpacePhysics.RESSOURCE_TYPE.WATER:
 				water+=incomingRessources.values[i]
+				if water<0:
+					water=0
 			SpacePhysics.RESSOURCE_TYPE.PLANETMASS:
 				planetMass+=incomingRessources.values[i]
+				
 
 func getRessourceTransfer():
 	var ressource = RessourceTransfer.new()

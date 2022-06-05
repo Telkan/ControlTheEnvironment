@@ -18,5 +18,7 @@ shape = SubResource( 1 )
 disabled = true
 
 [node name="Trail" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 1.74, 4.63, 1 )
 
 [node name="Prediction" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1.5, 1.5, 1.5, 1 )
