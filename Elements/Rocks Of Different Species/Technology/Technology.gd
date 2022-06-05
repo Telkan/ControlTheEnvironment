@@ -14,10 +14,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	people = 0
 	food = 0
 	bio = 0
 	metal = 0
-
 	water = 0
