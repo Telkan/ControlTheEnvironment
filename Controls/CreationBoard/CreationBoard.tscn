@@ -159,6 +159,15 @@ modulate = Color( 0.87451, 0, 1, 1 )
 position = Vector2( 99.7806, 65.0356 )
 texture = ExtResource( 4 )
 
+[node name="OpenClose" type="Button" parent="."]
+margin_left = 17.7804
+margin_top = 586.899
+margin_right = 84.7804
+margin_bottom = 624.899
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="Test" to="." method="_on_Test_pressed"]
 [connection signal="pressed" from="Boom" to="." method="_on_Boom_pressed"]
 [connection signal="pressed" from="Launch" to="." method="_on_Launch_pressed"]

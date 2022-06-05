@@ -4,9 +4,9 @@ extends GravityElement
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var technoGrowingCoeff = 0.000005
-export var peopleGrowingCoeff = 1.0005
-export var bioGrowingCoeff = 1.0005
+export var technoGrowingCoeff = 0.05
+export var peopleGrowingCoeff = 0.5
+export var bioGrowingCoeff = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

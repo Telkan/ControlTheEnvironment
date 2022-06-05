@@ -5,7 +5,7 @@ var originPlanet
 var velocity = Vector2()
 var goHome = false
 var ressourcesGathered = RessourceTransfer.new()
-var speed = 30
+var speed = 100
 var acceleration = 10
 var cargoSpace
 

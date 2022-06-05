@@ -1,15 +1,20 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/CollisionDetector.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Ice.gd" type="Script" id=3]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Metals.gd" type="Script" id=4]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Houses.gd" type="Script" id=5]
-[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Animals.gd" type="Script" id=6]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0004_Metals.png" type="Texture" id=6]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Trees.gd" type="Script" id=7]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Technology.gd" type="Script" id=8]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/RocketFactory.gd" type="Script" id=9]
 [ext_resource path="res://Elements/Rocks Of Different Species/RootClass/RessourcePicker.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0000_Bedrock.png" type="Texture" id=11]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0003_Houses.png" type="Texture" id=12]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0002_Forest.png" type="Texture" id=13]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0005_SpacePort.png" type="Texture" id=14]
+[ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets_0001_Ice.png" type="Texture" id=15]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -22,79 +27,55 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 disabled = true
 
-[node name="Bedrock" type="Polygon2D" parent="CollisionShape2D"]
-position = Vector2( 0, -0.561234 )
-z_index = 1
-polygon = PoolVector2Array( -8.5988, -5.53467, -6.07611, -8.26758, -3.13297, -9.84426, -0.294945, -10.6852, 1.17662, -10.8954, 3.27887, -10.4749, 5.06577, -9.63404, 7.0629, -7.00624, 8.95492, -3.01198, 10.5316, 0.561829, 10.5316, 2.87429, 9.27025, 5.08165, 8.00891, 7.07878, 4.4351, 9.81169, 1.70219, 10.5475, -2.5023, 11.073, -6.49656, 10.0219, -8.91413, 7.289, -9.43969, 1.29761, -8.49368, -4.37844 )
+[node name="Bedrock" type="Sprite" parent="CollisionShape2D"]
+modulate = Color( 2, 2, 2, 1 )
+scale = Vector2( 0.0398431, 0.0398431 )
+texture = ExtResource( 11 )
 
 [node name="Houses" type="Node2D" parent="CollisionShape2D"]
-visible = false
+modulate = Color( 1.74, 1.16, 1, 1 )
 script = ExtResource( 5 )
 
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Houses"]
-color = Color( 0.494118, 0.231373, 0, 1 )
-polygon = PoolVector2Array( 5.15806, -5.97478, 11.4985, -8.89475, 18.1727, -8.1439, 15.8368, -3.13825, 8.49516, -0.468569 )
-
-[node name="Animals" type="Node2D" parent="CollisionShape2D"]
-visible = false
-script = ExtResource( 6 )
-
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Animals"]
-color = Color( 0.305882, 0.305882, 0.305882, 1 )
-polygon = PoolVector2Array( 10.5903, 1.70093, 10.7203, 1.45938, 10.9433, 1.49654, 11.092, 1.77526, 11.1291, 2.0354, 11.092, 2.18405, 10.9062, 2.23979, 11.0362, 2.29554, 11.2035, 2.27696, 11.3335, 2.10972, 11.4822, 2.07256, 11.6494, 2.07256, 11.6122, 2.22121, 11.4636, 2.35128, 11.2778, 2.40703, 11.1291, 2.48135, 10.9433, 2.49993, 10.7761, 2.46277, 10.6832, 2.27696, 10.5345, 2.20263, 10.3487, 2.14689, 10.3859, 1.71952 )
-
-[node name="Polygon2D2" type="Polygon2D" parent="CollisionShape2D/Animals"]
-position = Vector2( -0.409252, 1.25256 )
-color = Color( 0.305882, 0.305882, 0.305882, 1 )
-polygon = PoolVector2Array( 10.5903, 1.70093, 10.7203, 1.45938, 10.9433, 1.49654, 11.092, 1.77526, 11.1291, 2.0354, 11.092, 2.18405, 10.9062, 2.23979, 11.0362, 2.29554, 11.2035, 2.27696, 11.3335, 2.10972, 11.4822, 2.07256, 11.6494, 2.07256, 11.6122, 2.22121, 11.4636, 2.35128, 11.2778, 2.40703, 11.1291, 2.48135, 10.9433, 2.49993, 10.7761, 2.46277, 10.6832, 2.27696, 10.5345, 2.20263, 10.3487, 2.14689, 10.3859, 1.71952 )
-
-[node name="Polygon2D3" type="Polygon2D" parent="CollisionShape2D/Animals"]
-position = Vector2( -1.16575, 2.3439 )
-color = Color( 0.305882, 0.305882, 0.305882, 1 )
-polygon = PoolVector2Array( 10.5903, 1.70093, 10.7203, 1.45938, 10.9433, 1.49654, 11.092, 1.77526, 11.1291, 2.0354, 11.092, 2.18405, 10.9062, 2.23979, 11.0362, 2.29554, 11.2035, 2.27696, 11.3335, 2.10972, 11.4822, 2.07256, 11.6494, 2.07256, 11.6122, 2.22121, 11.4636, 2.35128, 11.2778, 2.40703, 11.1291, 2.48135, 10.9433, 2.49993, 10.7761, 2.46277, 10.6832, 2.27696, 10.5345, 2.20263, 10.3487, 2.14689, 10.3859, 1.71952 )
-
-[node name="Polygon2D4" type="Polygon2D" parent="CollisionShape2D/Animals"]
-position = Vector2( -1.94705, 3.43524 )
-color = Color( 0.305882, 0.305882, 0.305882, 1 )
-polygon = PoolVector2Array( 10.5903, 1.70093, 10.7203, 1.45938, 10.9433, 1.49654, 11.092, 1.77526, 11.1842, 2.0108, 11.092, 2.18405, 10.9062, 2.23979, 11.0362, 2.29554, 11.2035, 2.27696, 11.3335, 2.10972, 11.4822, 2.07256, 11.6494, 2.07256, 11.6122, 2.22121, 11.4636, 2.35128, 11.2778, 2.40703, 11.1291, 2.48135, 10.9433, 2.49993, 10.7761, 2.46277, 10.6832, 2.27696, 10.5345, 2.20263, 10.3487, 2.14689, 10.3859, 1.71952 )
+[node name="Sprite" type="Sprite" parent="CollisionShape2D/Houses"]
+scale = Vector2( 0.0401806, 0.0401806 )
+z_index = -1
+texture = ExtResource( 12 )
 
 [node name="Trees" type="Node2D" parent="CollisionShape2D"]
-visible = false
 script = ExtResource( 7 )
 
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Trees"]
-color = Color( 0.0431373, 0.517647, 0.14902, 1 )
-polygon = PoolVector2Array( -4.14187, -3.75522, -11.9554, -19.912, -8.84324, -20.6404, -2.28782, -5.2782, -1.69187, -5.54307, -1.69187, -4.74847, -2.94998, -4.41739, -3.81079, -3.15928, -4.93647, -2.82819, -5.13512, -3.62279 )
+[node name="Sprite" type="Sprite" parent="CollisionShape2D/Trees"]
+modulate = Color( 1, 2, 1, 1 )
+scale = Vector2( 0.0386367, 0.0386367 )
+z_index = -1
+texture = ExtResource( 13 )
 
 [node name="Metals" type="Node2D" parent="CollisionShape2D"]
-visible = false
 script = ExtResource( 4 )
 
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Metals"]
-color = Color( 0.235294, 0.235294, 0.235294, 1 )
-polygon = PoolVector2Array( -7.7766, -4.63768, -14.6176, -6.30623, -12.1148, -3.4697, -18.5387, -4.55426, -14.2839, -1.63429, -19.1227, -0.966873, -14.1171, 0.117683, -17.9548, 1.53595, -8.44402, 0.86853, -6.52518, -2.96913 )
+[node name="Sprite" type="Sprite" parent="CollisionShape2D/Metals"]
+modulate = Color( 1.2, 1.2, 1.2, 1 )
+scale = Vector2( 0.0410348, 0.0410348 )
+z_index = -1
+texture = ExtResource( 6 )
 
 [node name="Technology" type="Node2D" parent="CollisionShape2D"]
-visible = false
 script = ExtResource( 8 )
 
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Technology"]
-color = Color( 0, 0.298039, 1, 1 )
-polygon = PoolVector2Array( -8.54171, 2.95151, -11.1403, 3.34524, -13.1089, 4.52641, -13.7389, 6.4163, -13.5027, 9.17237, -12.7939, 9.88108, -11.3765, 10.511, -9.80163, 10.5898, -7.91175, 10.511, -6.57308, 9.40861, -6.10061, 8.22743, -5.15567, 5.70759 )
+[node name="Sprite" type="Sprite" parent="CollisionShape2D/Technology"]
+modulate = Color( 1.5, 1.5, 1.5, 1 )
+scale = Vector2( 0.0400383, 0.0400383 )
+z_index = -1
+texture = ExtResource( 14 )
 
 [node name="Ice" type="Node2D" parent="CollisionShape2D"]
-visible = false
 script = ExtResource( 3 )
 
-[node name="Polygon2D" type="Polygon2D" parent="CollisionShape2D/Ice"]
-color = Color( 0.403922, 0.917647, 1, 1 )
-polygon = PoolVector2Array( 3.31553, 9.43556, 3.17522, 10.3476, -0.122013, 11.0491, -1.6654, 11.4349, -2.78786, 11.3648, -4.47155, 11.0491, -5.45371, 10.7334, -6.01494, 10.2073, -5.59402, 9.50571 )
-
-[node name="Polygon2D2" type="Polygon2D" parent="CollisionShape2D/Ice"]
-position = Vector2( -0.445953, -0.743254 )
-rotation = 3.14159
-color = Color( 0.403922, 0.917647, 1, 1 )
-polygon = PoolVector2Array( 3.31553, 9.43556, 3.17522, 10.3476, -0.122013, 11.0491, -1.6654, 11.4349, -2.78786, 11.3648, -4.47155, 11.0491, -5.45371, 10.7334, -6.01494, 10.2073, -5.59402, 9.50571 )
+[node name="Sprite" type="Sprite" parent="CollisionShape2D/Ice"]
+position = Vector2( -0.0468216, 0 )
+scale = Vector2( 0.0392439, 0.039244 )
+z_index = -1
+texture = ExtResource( 15 )
 
 [node name="CollisionDetector" parent="CollisionShape2D" instance=ExtResource( 2 )]
 

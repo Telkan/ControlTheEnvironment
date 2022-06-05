@@ -30,7 +30,7 @@ func _on_CollisionDetector_area_entered(area):
 		planet.queue_free()
 	
 	elif otherPlanet.planetMass == planet.planetMass:
-		if planet.name > otherPlanet.name:
+		if planet.name < otherPlanet.name:
 			var ressources = planet.getRessourceTransfer()
 			otherPlanet.absorbRessources(ressources)
 			planet.queue_free()
