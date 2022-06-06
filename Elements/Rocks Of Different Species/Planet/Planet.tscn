@@ -84,7 +84,7 @@ script = ExtResource( 9 )
 originPath = NodePath("../..")
 
 [node name="Timer" type="Timer" parent="CollisionShape2D/RocketFactory"]
-wait_time = 5.0
+wait_time = 2.5
 
 [node name="RessourcePicker" parent="CollisionShape2D" instance=ExtResource( 10 )]
 

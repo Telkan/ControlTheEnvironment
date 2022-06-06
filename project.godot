@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Control The Environment"
-run/main_scene="res://Elements/Universe/TestZone.tscn"
+run/main_scene="res://Elements/Intro/Intro.tscn"
 config/icon="res://icon.png"
 
 [autoload]

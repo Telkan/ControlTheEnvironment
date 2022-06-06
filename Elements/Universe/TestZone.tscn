@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://TestZone/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Universe/PlanetCreator.gd" type="Script" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Controls/MovementBoard/MovementBoard.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Elements/UI/SelectedWell/SelectedWell.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Elements/UI/DisplayShot/DisplayShot.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Controls/Tutorial/Tutorial.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Ressources/Pixel LCD-7.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Elements/Universe/Money.gd" type="Script" id=13]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -20,6 +23,10 @@ glow_blend_mode = 1
 glow_hdr_threshold = 0.04
 glow_hdr_luminance_cap = 0.69
 glow_hdr_scale = 2.43
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 12 )
 
 [node name="Universe" type="Node2D"]
 script = ExtResource( 2 )
@@ -80,6 +87,36 @@ value = -20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Tutorial" parent="." instance=ExtResource( 11 )]
+
+[node name="MoneyDisplay" type="CanvasLayer" parent="."]
+
+[node name="Money" type="Label" parent="MoneyDisplay"]
+margin_left = 728.0
+margin_top = 14.0
+margin_right = 1024.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 5, 0, 1 )
+text = "65321356$"
+align = 2
+valign = 1
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="MoneyDisplay"]
+position = Vector2( 880, -48 )
+scale = Vector2( 0.328125, 0.238281 )
+z_index = -2
+texture = ExtResource( 3 )
+
+[node name="Polygon2D" type="Polygon2D" parent="MoneyDisplay"]
+z_index = -1
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 728, 8, 728, 56, 1032, 56, 1032, 30.6691, 1032, 8 )
 
 [connection signal="createPlanet" from="CreationBoard" to="." method="_on_CreationBoard_createPlanet"]
 [connection signal="destroy" from="CreationBoard" to="." method="_on_CreationBoard_destroy"]

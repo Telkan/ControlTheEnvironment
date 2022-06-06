@@ -1,4 +1,4 @@
-extends Node2D
+extends Label
 
 
 # Declare member variables here. Examples:
@@ -12,8 +12,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if get_parent().get_parent().people > 1:
-		set_visible(true)
-	else:
-		set_visible(false)
+func _process(delta):
+	text = str(SpacePhysics.amountOfMoney) + "$"
+	pass
