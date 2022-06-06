@@ -1,11 +1,10 @@
-extends CanvasLayer
+extends Node2D
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-var hidden = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,15 +12,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_ShowHide_pressed():
-	if hidden:
-		set_offset(Vector2(0,0))
-		hidden = false
+func _process(_delta):
+	if get_parent().pressed:
+		$on.set_visible(true)
+		$off.set_visible(false)
 	else:
-		set_offset(Vector2(410,0))
-		hidden = true
-	pass # Replace with function body.
+		$on.set_visible(false)
+		$off.set_visible(true)
+	pass

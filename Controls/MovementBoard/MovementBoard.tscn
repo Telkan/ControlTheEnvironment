@@ -1,34 +1,44 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Controls/Wheel/Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controls/MovementBoard/MovementBoard.gd" type="Script" id=2]
+[ext_resource path="res://Ressources/Tab.png" type="Texture" id=3]
+[ext_resource path="res://Ressources/BgTexture.png" type="Texture" id=4]
+[ext_resource path="res://Controls/MovementBoard/GraphNode.gd" type="Script" id=5]
+[ext_resource path="res://Ressources/switch0.png" type="Texture" id=6]
+[ext_resource path="res://Ressources/switch1.png" type="Texture" id=7]
+[ext_resource path="res://Ressources/BoardText.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 8 )
 
 [node name="MovementBoard" type="CanvasLayer"]
-offset = Vector2( 450, 0 )
-transform = Transform2D( 1, 0, 0, 1, 450, 0 )
+offset = Vector2( 410, 0 )
+transform = Transform2D( 1, 0, 0, 1, 410, 0 )
 script = ExtResource( 2 )
 
 [node name="Horizontal" parent="." instance=ExtResource( 1 )]
-margin_left = 1513.95
-margin_top = 667.953
-margin_right = -262.049
-margin_bottom = -107.047
+margin_left = 1549.96
+margin_top = 666.502
+margin_right = -243.041
+margin_bottom = -81.4983
 shortcut_in_tooltip = false
 text = "H"
 
 [node name="Vertical" parent="." instance=ExtResource( 1 )]
-margin_left = 1697.95
-margin_top = 667.953
-margin_right = -78.0492
-margin_bottom = -107.047
+margin_left = 1734.8
+margin_top = 666.502
+margin_right = -59.1997
+margin_bottom = -79.4983
 shortcut_in_tooltip = false
 text = "Z"
 
 [node name="Zoom" type="HSlider" parent="."]
-margin_left = 1841.95
-margin_top = 1010.52
-margin_right = 2169.95
-margin_bottom = 1026.52
+margin_left = 1873.24
+margin_top = 1041.29
+margin_right = 2201.24
+margin_bottom = 1057.29
 rect_rotation = -180.0
 min_value = 0.05
 max_value = 3.0
@@ -39,30 +49,95 @@ __meta__ = {
 }
 
 [node name="Follow" type="CheckButton" parent="."]
-margin_left = 1544.14
-margin_top = 604.287
-margin_right = 1620.14
-margin_bottom = 644.287
+margin_left = 1596.38
+margin_top = 544.421
+margin_right = 1672.38
+margin_bottom = 584.421
+rect_scale = Vector2( 0.224994, 1.56471 )
 shortcut_in_tooltip = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="GraphNode" type="Node2D" parent="Follow"]
+position = Vector2( 45.4912, 28.0934 )
+scale = Vector2( 1.97692, 0.284267 )
+script = ExtResource( 5 )
+
+[node name="off" type="Sprite" parent="Follow/GraphNode"]
+texture = ExtResource( 6 )
+
+[node name="on" type="Sprite" parent="Follow/GraphNode"]
+texture = ExtResource( 7 )
+
 [node name="DispOnOff" type="CheckButton" parent="."]
-margin_left = 1738.14
-margin_top = 604.287
-margin_right = 1814.14
-margin_bottom = 644.287
+margin_left = 1789.11
+margin_top = 558.254
+margin_right = 1865.11
+margin_bottom = 598.254
+rect_scale = Vector2( 0.264874, 1.65319 )
 pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="GraphNode2" type="Node2D" parent="DispOnOff"]
+position = Vector2( 31.4292, 16.1851 )
+scale = Vector2( 1.67927, 0.269053 )
+script = ExtResource( 5 )
+
+[node name="off" type="Sprite" parent="DispOnOff/GraphNode2"]
+texture = ExtResource( 6 )
+
+[node name="on" type="Sprite" parent="DispOnOff/GraphNode2"]
+texture = ExtResource( 7 )
+
 [node name="ShowHide" type="Button" parent="."]
-margin_left = 1417.68
-margin_top = 608.73
-margin_right = 1453.68
-margin_bottom = 698.73
+margin_left = 1460.26
+margin_top = 646.134
+margin_right = 1565.26
+margin_bottom = 683.134
+rect_rotation = -89.9999
+text = "Movement"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BgTexture" type="Sprite" parent="."]
+position = Vector2( 1715.56, 789.104 )
+scale = Vector2( 0.39455, 0.563193 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="Tab" type="Sprite" parent="BgTexture"]
+position = Vector2( -429.871, -338.552 )
+rotation = -1.57079
+scale = Vector2( 0.247752, 0.500052 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1547.32
+margin_top = 622.259
+margin_right = 1623.32
+margin_bottom = 654.259
+rect_rotation = -89.9999
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+text = "Follow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 1743.87
+margin_top = 604.62
+margin_right = 1819.87
+margin_bottom = 636.62
+rect_rotation = -89.9999
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.172549, 0.172549, 0.172549, 1 )
+text = "Info"
 __meta__ = {
 "_edit_use_anchors_": false
 }
