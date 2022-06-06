@@ -60,6 +60,6 @@ func _on_OpenClose_pressed():
 		set_offset(Vector2(0,0))
 		hidden = false
 	else:
-		set_offset(Vector2(0,400))
+		set_offset(Vector2(0,430))
 		hidden = true
 	pass # Replace with function body.

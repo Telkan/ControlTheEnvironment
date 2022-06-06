@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Controls/Wheel/Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controls/CreationBoard/CreationBoard.gd" type="Script" id=2]
@@ -9,73 +9,92 @@
 [ext_resource path="res://Elements/Rocks Of Different Species/Technology/Technology.png" type="Texture" id=7]
 [ext_resource path="res://Elements/Rocks Of Different Species/Planet/Planets.png" type="Texture" id=8]
 [ext_resource path="res://Elements/Rocks Of Different Species/Bio/Bio.png" type="Texture" id=9]
+[ext_resource path="res://Ressources/Tab.png" type="Texture" id=10]
+[ext_resource path="res://Ressources/BgTexture.png" type="Texture" id=11]
+[ext_resource path="res://Ressources/BoardText.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Ressources/button2.png" type="Texture" id=13]
+[ext_resource path="res://Ressources/button1.png" type="Texture" id=14]
+[ext_resource path="res://Ressources/Boom.png" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=2]
+size = 256
+extra_spacing_char = 22
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 150
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 12 )
+
+[sub_resource type="Gradient" id=3]
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+width = 1
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = SubResource( 4 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+extra_spacing_char = 5
+font_data = ExtResource( 12 )
 
 [node name="CreationBoard" type="CanvasLayer"]
-offset = Vector2( 0, 400 )
-transform = Transform2D( 1, 0, 0, 1, 0, 400 )
+offset = Vector2( 0, 430 )
+transform = Transform2D( 1, 0, 0, 1, 0, 430 )
 script = ExtResource( 2 )
 
 [node name="Speed" parent="." instance=ExtResource( 1 )]
 margin_left = 293.0
-margin_top = 715.912
-margin_right = -1475.0
-margin_bottom = -60.0883
+margin_top = 716.0
+margin_right = -1496.0
+margin_bottom = -24.0
 focus_mode = 0
 shortcut_in_tooltip = false
 text = "S"
 
-[node name="Distance" parent="." instance=ExtResource( 1 )]
-margin_left = 485.674
-margin_top = 717.183
-margin_right = -1271.33
-margin_bottom = -59.8173
-focus_mode = 0
-shortcut_in_tooltip = false
-text = "D"
-
-[node name="Test" type="Button" parent="."]
-margin_left = 719.294
-margin_top = 716.591
-margin_right = 830.294
-margin_bottom = 804.591
-rect_pivot_offset = Vector2( 0, 0.592773 )
-focus_mode = 0
-shortcut_in_tooltip = false
-text = "Test Probe"
+[node name="Test" type="TextureButton" parent="."]
+margin_left = 672.0
+margin_top = 714.0
+margin_right = 1696.0
+margin_bottom = 1738.0
+rect_scale = Vector2( 0.0989004, 0.0989004 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Boom" type="Button" parent="."]
-margin_left = 901.399
-margin_top = 861.129
-margin_right = 1079.4
-margin_bottom = 1016.13
-rect_pivot_offset = Vector2( 0, 0.592773 )
-focus_mode = 0
-shortcut_in_tooltip = false
-text = "Boom"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Launch" type="Button" parent="."]
-margin_left = 719.294
-margin_top = 871.505
-margin_right = 830.294
-margin_bottom = 959.505
-rect_pivot_offset = Vector2( 0, 88 )
-shortcut_in_tooltip = false
-text = "Launch Planet"
+[node name="Label4" type="Label" parent="Test"]
+margin_left = 242.668
+margin_top = 404.447
+margin_right = 815.668
+margin_bottom = 660.447
+rect_pivot_offset = Vector2( 56, -24 )
+size_flags_stretch_ratio = 4.44
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "PROBE"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PreviewSteps" type="HSlider" parent="."]
-margin_left = 719.294
-margin_top = 817.383
-margin_right = 830.294
-margin_bottom = 833.383
+margin_left = 664.0
+margin_top = 826.0
+margin_right = 775.0
+margin_bottom = 842.0
+rect_scale = Vector2( 1.04, 1 )
 focus_mode = 0
 min_value = 10.0
 max_value = 1000.0
@@ -84,42 +103,121 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PreviousWell" type="Button" parent="."]
-margin_left = 719.294
-margin_top = 979.317
-margin_right = 759.294
-margin_bottom = 1019.32
+[node name="Distance" parent="." instance=ExtResource( 1 )]
+margin_left = 486.0
+margin_top = 717.0
+margin_right = -1306.0
+margin_bottom = -24.0
+focus_mode = 0
 shortcut_in_tooltip = false
-text = "P"
+text = "D"
+
+[node name="Boom" type="TextureButton" parent="."]
+margin_left = 848.0
+margin_top = 882.0
+margin_right = 1008.0
+margin_bottom = 1042.0
+rect_pivot_offset = Vector2( 0, 0.592773 )
+focus_mode = 0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 15 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NextWell" type="Button" parent="."]
+[node name="Launch" type="TextureButton" parent="."]
+margin_left = 672.0
+margin_top = 810.0
+margin_right = 1176.0
+margin_bottom = 1314.0
+rect_scale = Vector2( 0.20307, 0.20307 )
+rect_pivot_offset = Vector2( 0, 88 )
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Launch"]
+margin_left = 78.7903
+margin_top = 206.186
+margin_right = 651.79
+margin_bottom = 462.186
+rect_pivot_offset = Vector2( 56, -24 )
+size_flags_stretch_ratio = 4.44
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "LAUNCH"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PreviousWell" type="TextureButton" parent="."]
+margin_left = 672.0
+margin_top = 994.0
+margin_right = 720.0
+margin_bottom = 1042.0
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="Label6" type="Label" parent="PreviousWell"]
+margin_left = 17.0
+margin_top = 14.0
+margin_right = 97.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 56, -24 )
+size_flags_stretch_ratio = 4.44
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "p"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextWell" type="TextureButton" parent="."]
 anchor_left = -0.00030969
 anchor_right = -0.00030969
-margin_left = 789.457
-margin_top = 979.912
-margin_right = 829.457
-margin_bottom = 1019.91
+margin_left = 728.595
+margin_top = 994.0
+margin_right = 776.595
+margin_bottom = 1042.0
 shortcut_in_tooltip = false
-text = "N"
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="Label6" type="Label" parent="NextWell"]
+margin_left = 18.0
+margin_top = 13.0
+margin_right = 114.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( 56, -24 )
+size_flags_stretch_ratio = 4.44
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "n"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mass" parent="." instance=ExtResource( 3 )]
-margin_top = 1020.91
-margin_right = 419.0
-margin_bottom = 1157.91
+margin_left = 96.0
+margin_top = 1058.0
+margin_right = 434.0
+margin_bottom = 1195.0
+custom_styles/bg = SubResource( 5 )
 max_value = 4.0
 value = 1.0
 
 [node name="ChooseType" type="VSlider" parent="."]
-margin_left = 899.0
-margin_top = 716.912
-margin_right = 931.0
-margin_bottom = 843.912
+margin_left = 840.0
+margin_top = 722.0
+margin_right = 872.0
+margin_bottom = 849.0
 max_value = 4.0
 script = ExtResource( 5 )
 __meta__ = {
@@ -130,24 +228,27 @@ __meta__ = {
 "Element",
 ]]
 visible = false
-position = Vector2( 99.7806, 65.0356 )
-scale = Vector2( 0.19135, 0.19135 )
+position = Vector2( 96, 64 )
+scale = Vector2( 0.146671, 0.146671 )
+z_index = 1
 texture = ExtResource( 8 )
 
 [node name="Ice" type="Sprite" parent="ChooseType" groups=[
 "Element",
 ]]
 visible = false
-position = Vector2( 99.7806, 65.0356 )
+position = Vector2( 92, 64 )
 scale = Vector2( 0.15899, 0.15899 )
+z_index = 1
 texture = ExtResource( 6 )
 
 [node name="Metal" type="Sprite" parent="ChooseType" groups=[
 "Element",
 ]]
 visible = false
-position = Vector2( 99.7806, 65.0356 )
-scale = Vector2( 0.157777, 0.157777 )
+position = Vector2( 91, 67 )
+scale = Vector2( 0.109375, 0.109375 )
+z_index = 1
 texture = ExtResource( 4 )
 
 [node name="Bio" type="Sprite" parent="ChooseType" groups=[
@@ -156,6 +257,7 @@ texture = ExtResource( 4 )
 visible = false
 position = Vector2( 99.7806, 65.0356 )
 scale = Vector2( 0.264423, 0.264423 )
+z_index = 1
 texture = ExtResource( 9 )
 
 [node name="Technology" type="Sprite" parent="ChooseType" groups=[
@@ -163,16 +265,82 @@ texture = ExtResource( 9 )
 ]]
 visible = false
 modulate = Color( 0.87451, 0, 1, 1 )
-position = Vector2( 99.7806, 65.0356 )
-scale = Vector2( 0.188665, 0.188665 )
+position = Vector2( 90.7808, 64.0356 )
+scale = Vector2( 0.148866, 0.148866 )
+z_index = 1
 texture = ExtResource( 7 )
+
+[node name="Polygon2D" type="Polygon2D" parent="ChooseType"]
+position = Vector2( 0, -432 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 32, 430, 152, 430, 152, 558, 32, 558 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="OpenClose" type="Button" parent="."]
 margin_left = 15.6615
-margin_top = 637.81
+margin_top = 602.81
 margin_right = 82.6615
-margin_bottom = 675.81
+margin_bottom = 640.81
 text = "Display"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tab" type="Sprite" parent="."]
+position = Vector2( 48, 645 )
+scale = Vector2( 0.100019, 0.101562 )
+z_index = -1
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 561.678, 896 )
+scale = Vector2( 1.09703, 0.46875 )
+z_index = -1
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 312.0
+margin_top = 682.0
+margin_right = 400.0
+margin_bottom = 718.0
+rect_pivot_offset = Vector2( 56, -24 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "SPEED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 488.0
+margin_top = 682.0
+margin_right = 617.0
+margin_bottom = 718.0
+rect_pivot_offset = Vector2( 56, -24 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "Distance"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 682.0
+margin_right = 257.0
+margin_bottom = 718.0
+rect_pivot_offset = Vector2( 56, -24 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+text = "MASS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
