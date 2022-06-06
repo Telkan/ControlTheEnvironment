@@ -4,7 +4,7 @@
 [ext_resource path="res://Ressources/Pixel LCD-7.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Elements/Intro/Intro2.gd" type="Script" id=5]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=4]
 resource_name = "LoadingText"
 length = 60.0
 loop = true
@@ -165,11 +165,11 @@ tracks/2/keys = {
 ", "Bonne chance, employe 7642" ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=5]
 size = 50
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 30
 font_data = ExtResource( 3 )
 
@@ -190,14 +190,14 @@ script = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "LoadingText"
-anims/LoadingText = SubResource( 1 )
+anims/LoadingText = SubResource( 4 )
 
 [node name="Label" type="Label" parent="AnimationPlayer"]
 margin_left = 56.0
 margin_top = 64.0
 margin_right = 1848.0
 margin_bottom = 168.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 3, 0, 1 )
 text = "BONJOUR, EMPLOYE NUMERO 7642"
 align = 1
@@ -210,7 +210,7 @@ margin_left = 56.0
 margin_top = 216.0
 margin_right = 1848.0
 margin_bottom = 320.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 3, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -221,7 +221,7 @@ margin_left = 56.0
 margin_top = 960.0
 margin_right = 1848.0
 margin_bottom = 1064.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 3, 0, 1 )
 text = "
 "

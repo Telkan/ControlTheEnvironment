@@ -22,6 +22,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	SpacePhysics.amountOfMoney += 1*_delta
+	
+	var listOfPossibleWinners = get_tree().get_nodes_in_group("GravityWell")
+	
+	for currentWell in listOfPossibleWinners:
+		if currentWell.technology >= 1000000:
+			if SpacePhysics.amountOfMoney < 100000:
+				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")
+			else:
+				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")
 	if not is_instance_valid(chosenWell):
 		chosenWell = get_tree().get_nodes_in_group("DefaultWell")[0]
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
@@ -53,14 +63,19 @@ func _on_CreationBoard_createPlanet(mass, distance, speed, planetType):
 	match planetType:
 		SpacePhysics.PLANET_TYPE.PLANET:
 			newPlanet = Planet.instance()
+			SpacePhysics.amountOfMoney+= 50*mass
 		SpacePhysics.PLANET_TYPE.ICE:
 			newPlanet = Ice.instance()
+			SpacePhysics.amountOfMoney+= 10*mass
 		SpacePhysics.PLANET_TYPE.METAL:
 			newPlanet = Metal.instance()
+			SpacePhysics.amountOfMoney+= 100*mass
 		SpacePhysics.PLANET_TYPE.TECHNOLOGY:
 			newPlanet = Technology.instance()
+			SpacePhysics.amountOfMoney+= 1000*mass
 		SpacePhysics.PLANET_TYPE.BIO:
 			newPlanet = Bio.instance()
+			SpacePhysics.amountOfMoney+= 1000*mass
 	newPlanet.position = chosenWell.position + Vector2(distance,0)
 	newPlanet.gravCenter = chosenWell
 	newPlanet.linear_velocity = chosenWell.velocity + Vector2(0,-speed)

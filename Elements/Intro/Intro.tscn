@@ -4,7 +4,7 @@
 [ext_resource path="res://Ressources/Pixel LCD-7.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Elements/Intro/Intro.gd" type="Script" id=5]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=4]
 resource_name = "LoadingText"
 length = 15.5
 loop = true
@@ -95,7 +95,7 @@ script = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "LoadingText"
-anims/LoadingText = SubResource( 1 )
+anims/LoadingText = SubResource( 4 )
 
 [node name="Label" type="Label" parent="AnimationPlayer"]
 margin_left = 56.0

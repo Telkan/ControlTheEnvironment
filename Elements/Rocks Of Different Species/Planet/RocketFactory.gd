@@ -23,11 +23,11 @@ func sendRocket():
 	
 	listOfDestinations.shuffle()
 	var destination = listOfDestinations[0]
-	if origin.metal<1:
+	if origin.metal<10:
 		return
 	
 	var ressourceCost = RessourceTransfer.new()
-	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.METAL,-1)
+	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.METAL,-10)
 	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.PEOPLE,-1)
 	origin.absorbRessources(ressourceCost)
 	
