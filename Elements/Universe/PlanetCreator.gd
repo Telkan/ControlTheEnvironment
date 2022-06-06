@@ -31,7 +31,7 @@ func _process(_delta):
 			if SpacePhysics.amountOfMoney < 50000:
 				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")
 			else:
-				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")
+				get_tree().change_scene("res://Elements/Endings/BadEnding.tscn")
 	if not is_instance_valid(chosenWell):
 		chosenWell = get_tree().get_nodes_in_group("DefaultWell")[0]
 	get_tree().call_group("Probe","setPredLength",$CreationBoard.previewSteps)
