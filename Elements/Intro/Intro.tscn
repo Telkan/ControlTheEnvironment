@@ -108,7 +108,9 @@ text = "Booting up configuration...  DONE
 
 Setting up the Universe... DONE
 
-Generating Sentience..."
+Generating Sentience... DONE
+
+Loading complete"
 __meta__ = {
 "_edit_use_anchors_": true
 }

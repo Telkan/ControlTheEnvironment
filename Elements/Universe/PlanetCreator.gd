@@ -28,7 +28,7 @@ func _process(_delta):
 	
 	for currentWell in listOfPossibleWinners:
 		if currentWell.technology >= 1000000:
-			if SpacePhysics.amountOfMoney < 100000:
+			if SpacePhysics.amountOfMoney < 50000:
 				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")
 			else:
 				get_tree().change_scene("res://Elements/Endings/GoodEnding.tscn")

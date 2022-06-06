@@ -16,7 +16,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 2 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "BONJOUR, EMPLOYE NUMERO 7642" ]
@@ -28,7 +28,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 5, 10, 16, 20, 25, 30, 35, 36, 37, 40, 45 ),
+"times": PoolRealArray( 2, 7, 12, 18, 22, 27, 32, 37, 38, 39, 42, 47 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ "", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
@@ -158,7 +158,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 50 ),
+"times": PoolRealArray( 2, 52 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ "
@@ -212,6 +212,25 @@ margin_right = 1848.0
 margin_bottom = 320.0
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 3, 0, 1 )
+text = "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants...
+
+Vous serez desintegres.
+
+Notre argent est precieux."
 __meta__ = {
 "_edit_use_anchors_": false
 }

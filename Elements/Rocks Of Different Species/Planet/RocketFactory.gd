@@ -27,7 +27,7 @@ func sendRocket():
 		return
 	
 	var ressourceCost = RessourceTransfer.new()
-	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.METAL,-10)
+	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.METAL,-5)
 	ressourceCost.addRessource(SpacePhysics.RESSOURCE_TYPE.PEOPLE,-1)
 	origin.absorbRessources(ressourceCost)
 	
@@ -39,9 +39,16 @@ func sendRocket():
 	add_child(newRocket)
 	
 func _process(_delta):
-	if origin.technology >10:
+	if origin.technology >5:
 		if $Timer.is_stopped():
 			$Timer.start()
+
+	if origin.technology >50000:
+		$Timer.wait_time = 1
+	elif origin.technology >5000:
+		$Timer.wait_time = 1.5
+	elif origin.technology >500:
+		$Timer.wait_time = 2
 		pass
 
 
