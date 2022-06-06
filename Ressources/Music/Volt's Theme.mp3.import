@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Volt's Theme.mp3-aed9486abb79416636572a06d40a6242.mp
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

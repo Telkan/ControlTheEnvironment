@@ -11,5 +11,5 @@ dest_files=[ "res://.import/In the Shadows.mp3-05e87e7b53f95c5eb0283fd525803f5e.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

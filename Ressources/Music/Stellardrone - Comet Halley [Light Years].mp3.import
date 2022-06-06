@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Stellardrone - Comet Halley [Light Years].mp3-ef8e07
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

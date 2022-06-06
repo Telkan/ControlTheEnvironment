@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Skylights (Efence Remix).mp3-1722d0af74b403351f17879
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

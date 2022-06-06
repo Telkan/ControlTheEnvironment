@@ -27,12 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Control The Environment"
-run/main_scene="res://TestZone/TestZone.tscn"
+run/main_scene="res://Elements/Universe/TestZone.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 SpacePhysics="*res://GlobalStuff/SpacePhysics.gd"
+GlobalAudioStreamPlayer="*res://Elements/Intro/AudioStreamPlayer.gd"
 
 [display]
 
@@ -46,6 +47,13 @@ window/stretch/mode="2d"
 
 common/default_angular_damp=1.0
 common/default_linear_damp=0.1
+
+[importer_defaults]
+
+mp3={
+"loop": false,
+"loop_offset": 0
+}
 
 [input]
 

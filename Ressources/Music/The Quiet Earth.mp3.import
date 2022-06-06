@@ -11,5 +11,5 @@ dest_files=[ "res://.import/The Quiet Earth.mp3-5063ca57e7752d81f5fe32161cc7d1de
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

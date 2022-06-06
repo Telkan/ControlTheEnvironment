@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Galactic Journey.mp3-f7f4fff2e4b6438e07273195a20d32d
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

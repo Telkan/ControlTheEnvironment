@@ -1,0 +1,240 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Elements/UI/Scanlines/ScanLines.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ressources/Pixel LCD-7.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Elements/Intro/Intro2.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "LoadingText"
+length = 60.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "BONJOUR, EMPLOYE NUMERO 7642" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/Label2:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 10, 16, 20, 25, 30, 35, 36, 37, 40, 45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants.", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants..", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants...", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants...
+
+Vous serez desintegres.", "Merci d'avoir installe SolarSim 4000 sur votre ordinateur de service. 
+
+
+Comme vous le savez, il s'agit du simulateur le plus developpe de tout le monde connu.
+Avec ses 50 Mo de memoire allouee, il peut bien entendu contenir tout un 
+systeme solaire.
+
+Votre mission est d'utiliser ce logiciel afin de developper une civilisation
+du berceau jusqu'a l'age de l'exploration interstellaire.
+
+Si vos resultats sont bons, nous prendrons votre travail pour exemple.
+Nous utiliserons la simulation pour aller dans le passe, et generer notre propre 
+civilisation.
+
+Si vos resultats sont insuffisants...
+
+Vous serez desintegres.
+
+Notre argent est precieux." ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/Label3:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 50 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "
+", "Bonne chance, employe 7642" ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 0.9
+glow_strength = 0.66
+glow_blend_mode = 1
+glow_hdr_threshold = 0.04
+glow_hdr_luminance_cap = 0.69
+glow_hdr_scale = 2.43
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ScanLines" parent="." instance=ExtResource( 1 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "LoadingText"
+anims/LoadingText = SubResource( 1 )
+
+[node name="Label" type="Label" parent="AnimationPlayer"]
+margin_left = 56.0
+margin_top = 64.0
+margin_right = 1848.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 3, 0, 1 )
+text = "BONJOUR, EMPLOYE NUMERO 7642"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AnimationPlayer"]
+margin_left = 56.0
+margin_top = 216.0
+margin_right = 1848.0
+margin_bottom = 320.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 3, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="AnimationPlayer"]
+margin_left = 56.0
+margin_top = 960.0
+margin_right = 1848.0
+margin_bottom = 1064.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 3, 0, 1 )
+text = "
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 58.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

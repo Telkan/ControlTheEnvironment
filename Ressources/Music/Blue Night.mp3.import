@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Blue Night.mp3-06e8ef60fffd8d49fc892a2777b8d835.mp3s
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

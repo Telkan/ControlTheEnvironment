@@ -11,6 +11,7 @@ var listOfMusic = ["res://Ressources/Music/Blue Night.mp3","res://Ressources/Mus
 var currentMusic
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize() 
 	currentMusic = 0
 	rng.randomize()
 	listOfMusic.shuffle()

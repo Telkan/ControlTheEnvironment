@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BootSequence.mp3-f7e3ef7a3bef75ac51c22a955bd566e5.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Sounds/BootSequence.mp3"
+dest_files=[ "res://.import/BootSequence.mp3-f7e3ef7a3bef75ac51c22a955bd566e5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
