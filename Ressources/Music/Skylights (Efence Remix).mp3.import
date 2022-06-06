@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Skylights (Efence Remix).mp3-1722d0af74b403351f17879f85eac795.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/Skylights (Efence Remix).mp3"
+dest_files=[ "res://.import/Skylights (Efence Remix).mp3-1722d0af74b403351f17879f85eac795.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

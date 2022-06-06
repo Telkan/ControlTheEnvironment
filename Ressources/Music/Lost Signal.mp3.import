@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lost Signal.mp3-5baca5c83f6e7464f1654eba6633cc8d.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/Lost Signal.mp3"
+dest_files=[ "res://.import/Lost Signal.mp3-5baca5c83f6e7464f1654eba6633cc8d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

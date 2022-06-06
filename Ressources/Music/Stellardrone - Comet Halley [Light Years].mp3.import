@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Stellardrone - Comet Halley [Light Years].mp3-ef8e07a6ecef8914b138127a115fb978.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/Stellardrone - Comet Halley [Light Years].mp3"
+dest_files=[ "res://.import/Stellardrone - Comet Halley [Light Years].mp3-ef8e07a6ecef8914b138127a115fb978.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

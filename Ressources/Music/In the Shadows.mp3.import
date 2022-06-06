@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/In the Shadows.mp3-05e87e7b53f95c5eb0283fd525803f5e.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/In the Shadows.mp3"
+dest_files=[ "res://.import/In the Shadows.mp3-05e87e7b53f95c5eb0283fd525803f5e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

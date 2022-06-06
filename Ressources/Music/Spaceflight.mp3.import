@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Spaceflight.mp3-e9cd60b9ed5d287c7b92eaf91c846ee8.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/Spaceflight.mp3"
+dest_files=[ "res://.import/Spaceflight.mp3-e9cd60b9ed5d287c7b92eaf91c846ee8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

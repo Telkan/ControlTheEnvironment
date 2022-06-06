@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blue Night.mp3-06e8ef60fffd8d49fc892a2777b8d835.mp3str"
+
+[deps]
+
+source_file="res://Ressources/Music/Blue Night.mp3"
+dest_files=[ "res://.import/Blue Night.mp3-06e8ef60fffd8d49fc892a2777b8d835.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

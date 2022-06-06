@@ -54,10 +54,10 @@ transform = Transform2D( 1, 0, 0, 1, 0, 430 )
 script = ExtResource( 2 )
 
 [node name="Speed" parent="." instance=ExtResource( 1 )]
-margin_left = 293.0
-margin_top = 716.0
-margin_right = -1496.0
-margin_bottom = -24.0
+margin_left = 296.0
+margin_top = 714.0
+margin_right = -1493.0
+margin_bottom = -26.0
 focus_mode = 0
 shortcut_in_tooltip = false
 text = "S"
@@ -283,13 +283,13 @@ margin_left = 15.6615
 margin_top = 602.81
 margin_right = 82.6615
 margin_bottom = 640.81
-text = "Display"
+text = "Creation"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tab" type="Sprite" parent="."]
-position = Vector2( 48, 645 )
+[node name="Tab" type="Sprite" parent="OpenClose"]
+position = Vector2( 32.3385, 42.1896 )
 scale = Vector2( 0.100019, 0.101562 )
 z_index = -1
 texture = ExtResource( 10 )

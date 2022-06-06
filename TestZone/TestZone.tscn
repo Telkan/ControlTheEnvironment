@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Elements/Sun/Sun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TestZone/PlanetCreator.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Controls/CreationBoard/CreationBoard.tscn" type="PackedScene" id=6]
 [ext_resource path="res://TestZone/Camera2D.gd" type="Script" id=7]
 [ext_resource path="res://Controls/MovementBoard/MovementBoard.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ressources/Music/MusicBox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Ressources/BgTexture.png" type="Texture" id=10]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -60,6 +62,31 @@ scale = Vector2( 1.2, 0.9 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 9 )]
+volume_db = -72.706
+autoplay = false
+
+[node name="MusicControl" type="CanvasLayer" parent="."]
+
+[node name="BgTexture" type="Sprite" parent="MusicControl"]
+position = Vector2( 1568, -26 )
+scale = Vector2( 0.242188, 0.113281 )
+texture = ExtResource( 10 )
+
+[node name="HSlider" type="HSlider" parent="MusicControl" groups=[
+"SoundLevel",
+]]
+margin_left = 1464.0
+margin_top = 4.0
+margin_right = 1672.0
+margin_bottom = 28.0
+min_value = -20.0
+max_value = 0.0
+value = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
 }
 
 [connection signal="createPlanet" from="CreationBoard" to="." method="_on_CreationBoard_createPlanet"]
