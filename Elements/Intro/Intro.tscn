@@ -6,7 +6,7 @@
 
 [sub_resource type="Animation" id=4]
 resource_name = "LoadingText"
-length = 15.5
+length = 18.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer/Label:text")
@@ -102,15 +102,8 @@ margin_left = 56.0
 margin_top = 72.0
 margin_right = 824.0
 margin_bottom = 704.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 3, 0, 1 )
-text = "Booting up configuration...  DONE
-
-Setting up the Universe... DONE
-
-Generating Sentience... DONE
-
-Loading complete"
+custom_fonts/font = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -119,7 +112,7 @@ __meta__ = {
 environment = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 15.5
+wait_time = 17.0
 autostart = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
